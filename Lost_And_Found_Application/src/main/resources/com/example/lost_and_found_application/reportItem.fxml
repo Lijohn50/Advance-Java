@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.example.lost_and_found_application.Controller.ReportItemController"
+           prefWidth="1100" prefHeight="700"
+           style="-fx-background-color: #16161e;">
+
+    <GridPane hgap="18" vgap="16"
+              maxWidth="560" maxHeight="640"
+              style="-fx-background-color: #1e1e2a;
+                     -fx-background-radius: 18;
+                     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 25, 0.2, 0, 8);">
+
+        <padding>
+            <Insets top="36" right="40" bottom="30" left="40"/>
+        </padding>
+
+        <columnConstraints>
+            <ColumnConstraints percentWidth="50"/>
+            <ColumnConstraints percentWidth="50"/>
+        </columnConstraints>
+
+        <!-- Title -->
+        <Label text="Report an Item"
+               style="-fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold;"
+               GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+
+        <Label text="Fill in the details below"
+               style="-fx-text-fill: rgba(255,255,255,0.5); -fx-font-size: 12px;"
+               GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="2">
+            <GridPane.margin>
+                <Insets bottom="10"/>
+            </GridPane.margin>
+        </Label>
+
+        <!-- Item Name -->
+        <Label text="Item Name" style="-fx-text-fill: rgba(255,255,255,0.6); -fx-font-size: 11px;"
+               GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="itemNameField" promptText="e.g. Black Backpack"
+                   prefHeight="40"
+                   GridPane.rowIndex="3" GridPane.columnIndex="0"
+                   style="-fx-background-color: #16161e;
+                          -fx-background-radius: 10;
+                          -fx-text-fill: white;
+                          -fx-prompt-text-fill: rgba(255,255,255,0.35);
+                          -fx-padding: 0 12 0 12;
+                          -fx-font-size: 12px;"/>
+
+        <!-- Category -->
+        <Label text="Category" style="-fx-text-fill: rgba(255,255,255,0.6); -fx-font-size: 11px;"
+               GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <ComboBox fx:id="categoryComboBox" promptText="Select category"
+                  prefHeight="40" maxWidth="Infinity"
+                  GridPane.rowIndex="3" GridPane.columnIndex="1"
+                  style="-fx-background-color: #16161e;
+                         -fx-background-radius: 10;
+                         -fx-text-fill: white;
+                         -fx-font-size: 12px;"/>
+
+        <!-- Lost / Found -->
+        <Label text="Status" style="-fx-text-fill: rgba(255,255,255,0.6); -fx-font-size: 11px;"
+               GridPane.rowIndex="4" GridPane.columnIndex="0">
+            <GridPane.margin><Insets top="8"/></GridPane.margin>
+        </Label>
+        <HBox spacing="10" GridPane.rowIndex="5" GridPane.columnIndex="0">
+            <RadioButton fx:id="lostRadio" text="Lost" selected="true"
+                         style="-fx-text-fill: white; -fx-font-size: 12px;">
+                <toggleGroup>
+                    <ToggleGroup fx:id="statusToggleGroup"/>
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="foundRadio" text="Found" toggleGroup="$statusToggleGroup"
+                         style="-fx-text-fill: white; -fx-font-size: 12px;"/>
+        </HBox>
+
+        <!-- Location -->
+        <Label text="Location" style="-fx-text-fill: rgba(255,255,255,0.6); -fx-font-size: 11px;"
+               GridPane.rowIndex="4" GridPane.columnIndex="1">
+            <GridPane.margin><Insets top="8"/></GridPane.margin>
+        </Label>
+        <TextField fx:id="locationField" promptText="e.g. Library, 2nd Floor"
+                   prefHeight="40"
+                   GridPane.rowIndex="5" GridPane.columnIndex="1"
+                   style="-fx-background-color: #16161e;
+                          -fx-background-radius: 10;
+                          -fx-text-fill: white;
+                          -fx-prompt-text-fill: rgba(255,255,255,0.35);
+                          -fx-padding: 0 12 0 12;
+                          -fx-font-size: 12px;"/>
+
+        <!-- Date Picker -->
+        <Label text="Date" style="-fx-text-fill: rgba(255,255,255,0.6); -fx-font-size: 11px;"
+               GridPane.rowIndex="6" GridPane.columnIndex="0">
+            <GridPane.margin><Insets top="8"/></GridPane.margin>
+        </Label>
+        <DatePicker fx:id="datePicker" maxWidth="Infinity" prefHeight="40"
+                    GridPane.rowIndex="7" GridPane.columnIndex="0"
+                    style="-fx-background-color: #16161e;
+                           -fx-background-radius: 10;
+                           -fx-text-fill: white;
+                           -fx-font-size: 12px;"/>
+
+        <!-- Upload Image Placeholder -->
+        <Label text="Image" style="-fx-text-fill: rgba(255,255,255,0.6); -fx-font-size: 11px;"
+               GridPane.rowIndex="6" GridPane.columnIndex="1">
+            <GridPane.margin><Insets top="8"/></GridPane.margin>
+        </Label>
+        <Button fx:id="uploadImageButton" text="📷  Upload Image" onAction="#handleUploadImage"
+                maxWidth="Infinity" prefHeight="40"
+                GridPane.rowIndex="7" GridPane.columnIndex="1"
+                style="-fx-background-color: transparent;
+                       -fx-text-fill: rgba(255,255,255,0.6);
+                       -fx-background-radius: 10;
+                       -fx-border-color: rgba(255,255,255,0.25);
+                       -fx-border-style: dashed;
+                       -fx-border-radius: 10;
+                       -fx-font-size: 12px;
+                       -fx-cursor: hand;"/>
+
+        <!-- Description -->
+        <Label text="Description" style="-fx-text-fill: rgba(255,255,255,0.6); -fx-font-size: 11px;"
+               GridPane.rowIndex="8" GridPane.columnIndex="0" GridPane.columnSpan="2">
+            <GridPane.margin><Insets top="8"/></GridPane.margin>
+        </Label>
+        <TextArea fx:id="descriptionArea" promptText="Add any extra details..."
+                  prefHeight="90" wrapText="true"
+                  GridPane.rowIndex="9" GridPane.columnIndex="0" GridPane.columnSpan="2"
+                  style="-fx-background-color: #16161e;
+                         -fx-background-radius: 10;
+                         -fx-text-fill: white;
+                         -fx-font-size: 12px;
+                         -fx-control-inner-background: #16161e;"/>
+
+        <!-- Submit / Cancel -->
+        <HBox spacing="12" alignment="CENTER_RIGHT"
+              GridPane.rowIndex="10" GridPane.columnIndex="0" GridPane.columnSpan="2">
+            <GridPane.margin><Insets top="14"/></GridPane.margin>
+            <Button fx:id="cancelButton" text="Cancel" onAction="#handleCancel"
+                    prefHeight="42" prefWidth="110"
+                    style="-fx-background-color: transparent;
+                           -fx-text-fill: rgba(255,255,255,0.6);
+                           -fx-background-radius: 10;
+                           -fx-border-color: rgba(255,255,255,0.2);
+                           -fx-border-radius: 10;
+                           -fx-font-size: 12px;
+                           -fx-cursor: hand;"/>
+            <Button fx:id="submitButton" text="Submit" onAction="#handleSubmit"
+                    prefHeight="42" prefWidth="110"
+                    style="-fx-background-color: #4f8cff;
+                           -fx-text-fill: white;
+                           -fx-background-radius: 10;
+                           -fx-font-size: 12px;
+                           -fx-font-weight: bold;
+                           -fx-cursor: hand;"/>
+        </HBox>
+    </GridPane>
+</StackPane>

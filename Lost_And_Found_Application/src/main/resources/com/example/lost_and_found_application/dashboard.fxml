@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane prefHeight="700" prefWidth="1100" style="-fx-background-color: #16161e;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lost_and_found_application.Controller.DashboardController">
+
+    <!-- ===== TOP HEADER ===== -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="12" style="-fx-background-color: #1c1c26;                      -fx-padding: 16 24 16 24;                      -fx-border-color: transparent transparent rgba(255,255,255,0.06) transparent;                      -fx-border-width: 0 0 1 0;">
+            <Label style="-fx-font-size: 20px;" text="🔍" />
+            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Lost &amp; Found System" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="logoutButton" onAction="#handleLogout" style="-fx-background-color: rgba(255,255,255,0.08);                            -fx-text-fill: white;                            -fx-background-radius: 8;                            -fx-font-size: 12px;                            -fx-cursor: hand;                            -fx-padding: 8 16 8 16;" text="Logout" />
+        </HBox>
+    </top>
+
+    <!-- ===== LEFT SIDEBAR ===== -->
+    <left>
+        <GridPane prefWidth="210" style="-fx-background-color: #1c1c26;                          -fx-padding: 20 12 20 12;" vgap="6">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="100" />
+            </columnConstraints>
+
+            <Button fx:id="dashboardNavBtn" maxWidth="Infinity" onAction="#showDashboard" prefHeight="42" style="-fx-background-color: #4f8cff;                            -fx-background-radius: 10;                            -fx-text-fill: white;                            -fx-font-size: 13px;                            -fx-alignment: CENTER_LEFT;                            -fx-padding: 0 0 0 16;                            -fx-cursor: hand;" text="🏠   Dashboard" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+
+            <Button fx:id="reportNavBtn" maxWidth="Infinity" onAction="#showReportItem" prefHeight="42" style="-fx-background-color: transparent;                            -fx-text-fill: rgba(255,255,255,0.7);                            -fx-background-radius: 10;                            -fx-font-size: 13px;                            -fx-alignment: CENTER_LEFT;                            -fx-padding: 0 0 0 16;                            -fx-cursor: hand;" text="📝   Report Item" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+    </left>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <center>
+        <BorderPane style="-fx-padding: 24 28 24 28;">
+
+            <!-- Stat cards + search -->
+            <top>
+                <BorderPane>
+                    <left>
+                        <HBox spacing="16" BorderPane.alignment="CENTER_LEFT">
+                            <GridPane prefWidth="150" style="-fx-background-color: #1e1e2a;                                               -fx-background-radius: 14;                                               -fx-padding: 16 22 16 22;">
+                                <Label style="-fx-text-fill: rgba(255,255,255,0.55); -fx-font-size: 11px;" text="Lost Items" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Label fx:id="lostCountLabel" style="-fx-text-fill: #ff6b6b; -fx-font-size: 26px; -fx-font-weight: bold;" text="24" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <columnConstraints>
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints />
+                           <RowConstraints />
+                        </rowConstraints>
+                            </GridPane>
+
+                            <GridPane prefWidth="150" style="-fx-background-color: #1e1e2a;                                               -fx-background-radius: 14;                                               -fx-padding: 16 22 16 22;">
+                                <Label style="-fx-text-fill: rgba(255,255,255,0.55); -fx-font-size: 11px;" text="Found Items" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Label fx:id="foundCountLabel" style="-fx-text-fill: #4f8cff; -fx-font-size: 26px; -fx-font-weight: bold;" text="17" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <columnConstraints>
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints />
+                           <RowConstraints />
+                        </rowConstraints>
+                            </GridPane>
+                        </HBox>
+                    </left>
+
+                    <right>
+                        <HBox alignment="CENTER_RIGHT" spacing="8" BorderPane.alignment="CENTER_RIGHT">
+                            <TextField fx:id="searchField" prefHeight="38" prefWidth="240" promptText="Search items..." style="-fx-background-color: #1e1e2a;                                               -fx-background-radius: 10;                                               -fx-text-fill: white;                                               -fx-prompt-text-fill: rgba(255,255,255,0.4);                                               -fx-padding: 0 12 0 12;                                               -fx-font-size: 12px;" />
+                            <Button fx:id="searchButton" onAction="#handleSearch" prefHeight="38" prefWidth="38" style="-fx-background-color: #4f8cff;                                            -fx-background-radius: 10;                                            -fx-text-fill: white;                                            -fx-cursor: hand;" text="🔍" />
+                        </HBox>
+                    </right>
+                </BorderPane>
+            </top>
+
+            <!-- Table -->
+            <center>
+                <TableView fx:id="itemsTable" style="-fx-background-color: #1e1e2a;                                   -fx-background-radius: 14;                                   -fx-table-cell-border-color: transparent;">
+                    <BorderPane.margin>
+                        <Insets bottom="20" top="20" />
+                    </BorderPane.margin>
+                    <columns>
+                        <TableColumn fx:id="nameColumn" prefWidth="188.0" text="Item Name">
+                            <cellValueFactory><PropertyValueFactory property="itemName" /></cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="categoryColumn" prefWidth="161.0" text="Category">
+                            <cellValueFactory><PropertyValueFactory property="category" /></cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="statusColumn" prefWidth="131.0" text="Status">
+                            <cellValueFactory><PropertyValueFactory property="status" /></cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="locationColumn" prefWidth="180.0" text="Location">
+                            <cellValueFactory><PropertyValueFactory property="location" /></cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="dateColumn" prefWidth="173.0" text="Date">
+                            <cellValueFactory><PropertyValueFactory property="date" /></cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </center>
+
+            <!-- Action buttons -->
+            <bottom>
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Button fx:id="reportButton" onAction="#itemDetails" prefHeight="40" prefWidth="120" style="-fx-background-color: #4f8cff;                                    -fx-text-fill: white;                                    -fx-background-radius: 10;                                    -fx-font-size: 12px;                                    -fx-font-weight: bold;                                    -fx-cursor: hand;" text="View" />
+                    <Button fx:id="editButton" onAction="#handleEdit" prefHeight="40" prefWidth="100" style="-fx-background-color: #1e1e2a;                                    -fx-text-fill: white;                                    -fx-background-radius: 10;                                    -fx-font-size: 12px;                                    -fx-cursor: hand;" text="Edit" />
+                    <Button fx:id="deleteButton" onAction="#handleDelete" prefHeight="40" prefWidth="100" style="-fx-background-color: #1e1e2a;                                    -fx-text-fill: #ff6b6b;                                    -fx-background-radius: 10;                                    -fx-font-size: 12px;                                    -fx-cursor: hand;" text="Delete" />
+                </HBox>
+            </bottom>
+        </BorderPane>
+    </center>
+</BorderPane>
