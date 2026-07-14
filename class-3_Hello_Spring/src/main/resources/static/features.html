@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features - MyWebsite</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f5f7fb;
+      color:#333;
+    }
+
+    header{
+      background:#0f172a;
+      color:white;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    header h2{
+      color:#60a5fa;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+    }
+
+    nav a:hover{
+      color:#60a5fa;
+    }
+
+    .hero{
+      text-align:center;
+      padding:70px 20px;
+      background:linear-gradient(135deg,#2563eb,#0ea5e9);
+      color:white;
+    }
+
+    .hero h1{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .container{
+      width:90%;
+      max-width:1100px;
+      margin:50px auto;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .feature{
+      background:white;
+      padding:30px;
+      border-radius:12px;
+      box-shadow:0 8px 20px rgba(0,0,0,.08);
+      transition:.3s;
+    }
+
+    .feature:hover{
+      transform:translateY(-8px);
+    }
+
+    .feature h3{
+      color:#2563eb;
+      margin-bottom:15px;
+    }
+
+    .back{
+      text-align:center;
+      margin:50px 0;
+    }
+
+    .back a{
+      text-decoration:none;
+      background:#2563eb;
+      color:white;
+      padding:14px 28px;
+      border-radius:8px;
+    }
+
+    .back a:hover{
+      background:#1d4ed8;
+    }
+
+    footer{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+  </style>
+
+</head>
+<body>
+
+<header>
+  <h2>MyWebsite</h2>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Our Features</h1>
+  <p>Everything you need to build a modern web experience.</p>
+</section>
+
+<div class="container">
+
+  <div class="grid">
+
+    <div class="feature">
+      <h3>🚀 High Performance</h3>
+      <p>Fast-loading pages with optimized layouts and clean code.</p>
+    </div>
+
+    <div class="feature">
+      <h3>📱 Responsive Design</h3>
+      <p>Your website looks beautiful on desktops, tablets, and mobile devices.</p>
+    </div>
+
+    <div class="feature">
+      <h3>🔒 Secure</h3>
+      <p>Built following modern web standards and best practices.</p>
+    </div>
+
+    <div class="feature">
+      <h3>🎨 Elegant UI</h3>
+      <p>Simple, clean, and professional interface with smooth styling.</p>
+    </div>
+
+    <div class="feature">
+      <h3>⚙ Easy Customization</h3>
+      <p>Modify colors, fonts, and layouts without changing much code.</p>
+    </div>
+
+    <div class="feature">
+      <h3>🌐 Cross Browser</h3>
+      <p>Compatible with all modern browsers for a consistent experience.</p>
+    </div>
+
+  </div>
+
+  <div class="back">
+    <a href="index.html">← Back to Home</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 MyWebsite. All rights reserved.
+</footer>
+
+</body>
+</html>

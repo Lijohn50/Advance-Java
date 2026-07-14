@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - MyWebsite</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f4f7fc;
+            color:#333;
+        }
+
+        header{
+            background:#0f172a;
+            color:white;
+            padding:20px 8%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        header h2{
+            color:#60a5fa;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+        }
+
+        nav a:hover{
+            color:#60a5fa;
+        }
+
+        .hero{
+            background:linear-gradient(135deg,#2563eb,#0ea5e9);
+            color:white;
+            text-align:center;
+            padding:80px 20px;
+        }
+
+        .hero h1{
+            font-size:42px;
+            margin-bottom:15px;
+        }
+
+        .hero p{
+            max-width:700px;
+            margin:auto;
+        }
+
+        .container{
+            width:90%;
+            max-width:1100px;
+            margin:60px auto;
+        }
+
+        .services{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:30px;
+        }
+
+        .service{
+            background:white;
+            padding:30px;
+            border-radius:12px;
+            box-shadow:0 8px 20px rgba(0,0,0,.08);
+            transition:.3s;
+        }
+
+        .service:hover{
+            transform:translateY(-8px);
+        }
+
+        .service h3{
+            color:#2563eb;
+            margin-bottom:15px;
+        }
+
+        .service p{
+            color:#555;
+            line-height:1.7;
+        }
+
+        .cta{
+            margin-top:70px;
+            background:#0f172a;
+            color:white;
+            padding:50px;
+            text-align:center;
+            border-radius:12px;
+        }
+
+        .cta a{
+            display:inline-block;
+            margin-top:20px;
+            text-decoration:none;
+            background:#2563eb;
+            color:white;
+            padding:14px 30px;
+            border-radius:8px;
+        }
+
+        .cta a:hover{
+            background:#1d4ed8;
+        }
+
+        footer{
+            background:#0f172a;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:60px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>MyWebsite</h2>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Our Services</h1>
+    <p>
+        We provide professional digital solutions to help businesses
+        build modern, fast, and user-friendly websites.
+    </p>
+</section>
+
+<div class="container">
+
+    <div class="services">
+
+        <div class="service">
+            <h3>🌐 Website Development</h3>
+            <p>
+                Responsive websites built with modern HTML, CSS,
+                JavaScript, and current web technologies.
+            </p>
+        </div>
+
+        <div class="service">
+            <h3>🎨 UI/UX Design</h3>
+            <p>
+                Beautiful interfaces focused on usability,
+                accessibility, and engaging user experiences.
+            </p>
+        </div>
+
+        <div class="service">
+            <h3>⚙ Web Applications</h3>
+            <p>
+                Interactive web applications with dashboards,
+                authentication, and dynamic functionality.
+            </p>
+        </div>
+
+        <div class="service">
+            <h3>📱 Responsive Design</h3>
+            <p>
+                Mobile-first layouts that work perfectly across
+                phones, tablets, laptops, and desktops.
+            </p>
+        </div>
+
+        <div class="service">
+            <h3>🚀 Performance Optimization</h3>
+            <p>
+                Improve loading speed, SEO, accessibility,
+                and overall website performance.
+            </p>
+        </div>
+
+        <div class="service">
+            <h3>🛠 Maintenance & Support</h3>
+            <p>
+                Regular updates, security improvements,
+                bug fixes, and technical support for your website.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="cta">
+        <h2>Need a Custom Solution?</h2>
+        <p>
+            We'd love to help bring your ideas to life with modern web technologies.
+        </p>
+
+        <a href="index.html">Back to Home</a>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 MyWebsite. All rights reserved.
+</footer>
+
+</body>
+</html>

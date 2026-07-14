@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Landing Page</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f5f7fb;
+            color:#333;
+            line-height:1.6;
+        }
+
+        /* Header */
+        header{
+            background:#0f172a;
+            color:white;
+            padding:20px 8%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        header h2{
+            color:#60a5fa;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+            transition:.3s;
+        }
+
+        nav a:hover{
+            color:#60a5fa;
+        }
+
+        /* Hero */
+        .hero{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:80px 8%;
+            flex-wrap:wrap;
+            gap:40px;
+        }
+
+        .hero-text{
+            flex:1;
+            min-width:280px;
+        }
+
+        .hero-text h1{
+            font-size:48px;
+            margin-bottom:20px;
+        }
+
+        .hero-text p{
+            margin-bottom:30px;
+            color:#555;
+        }
+
+        .btn{
+            display:inline-block;
+            padding:14px 28px;
+            background:#2563eb;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+            transition:.3s;
+        }
+
+        .btn:hover{
+            background:#1d4ed8;
+        }
+
+        .hero-image{
+            flex:1;
+            min-width:280px;
+        }
+
+        .hero-image img{
+            width:100%;
+            border-radius:15px;
+            box-shadow:0 10px 30px rgba(0,0,0,.15);
+        }
+
+        /* Features */
+        .features{
+            padding:70px 8%;
+            background:white;
+        }
+
+        .features h2{
+            text-align:center;
+            margin-bottom:40px;
+            font-size:34px;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:#f8fafc;
+            padding:30px;
+            border-radius:12px;
+            text-align:center;
+            transition:.3s;
+            box-shadow:0 5px 15px rgba(0,0,0,.05);
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+        }
+
+        .card h3{
+            margin:15px 0;
+        }
+
+        /* CTA */
+        .cta{
+            padding:70px 8%;
+            background:linear-gradient(135deg,#2563eb,#0ea5e9);
+            color:white;
+            text-align:center;
+        }
+
+        .cta h2{
+            font-size:36px;
+            margin-bottom:20px;
+        }
+
+        .cta .btn{
+            background:white;
+            color:#2563eb;
+            font-weight:bold;
+        }
+
+        /* Footer */
+        footer{
+            background:#0f172a;
+            color:#cbd5e1;
+            text-align:center;
+            padding:25px;
+        }
+
+        @media(max-width:768px){
+            .hero{
+                text-align:center;
+            }
+
+            .hero-text h1{
+                font-size:36px;
+            }
+
+            nav{
+                display:none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>MyWebsite</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Build Something Amazing</h1>
+        <p>
+            Create modern, responsive websites with clean layouts and elegant design.
+            This simple landing page demonstrates a professional HTML and CSS structure.
+        </p>
+        <a href="#" class="btn">Get Started</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="image.png" alt="Workspace">
+    </div>
+</section>
+
+<section class="features">
+    <h2>Why Choose Us?</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>⚡ Fast</h3>
+            <p>Optimized layouts and lightweight code for excellent performance.</p>
+        </div>
+
+        <div class="card">
+            <h3>📱 Responsive</h3>
+            <p>Looks great on desktops, tablets, and smartphones.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎨 Modern Design</h3>
+            <p>Clean colors, attractive typography, and beautiful spacing.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Ready to Start?</h2>
+    <p style="margin-bottom:25px;">
+        Join thousands of users building modern web experiences.
+    </p>
+    <a href="#" class="btn">Learn More</a>
+</section>
+
+<footer>
+    © 2026 MyWebsite. All rights reserved.
+</footer>
+
+</body>
+</html>
