@@ -1,0 +1,42 @@
+2026-07-19T02:35:10.673+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] c.e.p.PortfolioDeployApplication         : Starting PortfolioDeployApplication using Java 26.0.1 with PID 17585 (/home/lee/Documents/portfolio_deploy/target/classes started by lee in /home/lee/Documents/portfolio_deploy)
+2026-07-19T02:35:10.673+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] c.e.p.PortfolioDeployApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-07-19T02:35:10.726+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-19T02:35:10.726+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-19T02:35:10.726+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-19T02:35:10.729+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 55 ms
+2026-07-19T02:35:10.737+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page template: index
+2026-07-19T02:35:10.756+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-19T02:35:10.757+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] c.e.p.PortfolioDeployApplication         : Started PortfolioDeployApplication in 0.101 seconds (process running for 135.354)
+2026-07-19T02:35:10.758+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-19T02:39:04.253+06:00  INFO 17585 --- [portfolio_deploy] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2026-07-19T02:39:04.254+06:00  INFO 17585 --- [portfolio_deploy] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-19T02:39:04.255+06:00  INFO 17585 --- [portfolio_deploy] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-19T02:39:04.286+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] c.e.p.PortfolioDeployApplication         : Starting PortfolioDeployApplication using Java 26.0.1 with PID 17585 (/home/lee/Documents/portfolio_deploy/target/classes started by lee in /home/lee/Documents/portfolio_deploy)
+2026-07-19T02:39:04.287+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] c.e.p.PortfolioDeployApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-07-19T02:39:04.334+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-19T02:39:04.335+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-19T02:39:04.335+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-19T02:39:04.337+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 49 ms
+2026-07-19T02:39:04.347+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page template: index
+2026-07-19T02:39:04.368+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-19T02:39:04.369+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] c.e.p.PortfolioDeployApplication         : Started PortfolioDeployApplication in 0.093 seconds (process running for 368.965)
+2026-07-19T02:39:04.369+06:00  INFO 17585 --- [portfolio_deploy] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-19T02:39:20.525+06:00  INFO 17585 --- [portfolio_deploy] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-19T02:39:20.526+06:00  INFO 17585 --- [portfolio_deploy] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-19T02:39:21.598+06:00  INFO 18505 --- [portfolio_deploy] [restartedMain] c.e.p.PortfolioDeployApplication         : Starting PortfolioDeployApplication using Java 26.0.1 with PID 18505 (/home/lee/Documents/portfolio_deploy/target/classes started by lee in /home/lee/Documents/portfolio_deploy)
+2026-07-19T02:39:21.600+06:00  INFO 18505 --- [portfolio_deploy] [restartedMain] c.e.p.PortfolioDeployApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-07-19T02:39:21.637+06:00  INFO 18505 --- [portfolio_deploy] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-19T02:39:21.637+06:00  INFO 18505 --- [portfolio_deploy] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-19T02:39:21.913+06:00  INFO 18505 --- [portfolio_deploy] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-19T02:39:21.918+06:00  INFO 18505 --- [portfolio_deploy] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-19T02:39:21.918+06:00  INFO 18505 --- [portfolio_deploy] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-19T02:39:21.927+06:00  INFO 18505 --- [portfolio_deploy] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 290 ms
+2026-07-19T02:39:21.960+06:00  INFO 18505 --- [portfolio_deploy] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page template: index
+2026-07-19T02:39:22.046+06:00  INFO 18505 --- [portfolio_deploy] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-19T02:39:22.049+06:00  INFO 18505 --- [portfolio_deploy] [restartedMain] c.e.p.PortfolioDeployApplication         : Started PortfolioDeployApplication in 0.654 seconds (process running for 0.875)
+2026-07-19T02:39:31.552+06:00  INFO 18505 --- [portfolio_deploy] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-19T02:39:31.552+06:00  INFO 18505 --- [portfolio_deploy] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-19T02:39:31.553+06:00  INFO 18505 --- [portfolio_deploy] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-19T02:39:31.559+06:00  WARN 18505 --- [portfolio_deploy] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-07-19T02:39:37.642+06:00  WARN 18505 --- [portfolio_deploy] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-19T02:40:34.916+06:00  INFO 18505 --- [portfolio_deploy] [http-nio-8080-exec-8] c.e.portfolio_deploy.IndexController     : Message: Message(name=hkjh, email=lee@gmail.com, message=huhuh)
