@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymrleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form  th:action="@{/student-submit}" method="post">
+  <label>Student Name: </label>
+  <input type = "text" name = "name"><br><br>
+  <label>ID: </label>
+  <input type="number" name="id"><br><br>
+  <label>Email: </label>
+  <input type="email" name="email"><br><br>
+  <label>Message: </label>
+  <textarea name="message"></textarea><br><br>
+  <label>Password: </label>
+  <input type="password" name="password">
+  <button type="submit">submit</button>
+
+</form>
+</body>
+</html>

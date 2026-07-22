@@ -1,0 +1,459 @@
+2026-07-15T11:37:34.605+06:00  INFO 4812 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 4812 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T11:37:34.607+06:00  INFO 4812 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T11:37:34.637+06:00  INFO 4812 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T11:37:34.638+06:00  INFO 4812 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T11:37:35.054+06:00  INFO 4812 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T11:37:35.062+06:00  INFO 4812 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T11:37:35.062+06:00  INFO 4812 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T11:37:35.088+06:00  INFO 4812 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 450 ms
+2026-07-15T11:37:35.137+06:00  INFO 4812 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T11:37:35.275+06:00  INFO 4812 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T11:37:35.279+06:00  INFO 4812 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.926 seconds (process running for 1.309)
+2026-07-15T11:37:49.909+06:00  INFO 4812 --- [class-4_routing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T11:37:49.909+06:00  INFO 4812 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T11:37:49.909+06:00  INFO 4812 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-15T11:38:39.722+06:00  INFO 4812 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T11:38:39.725+06:00  INFO 4812 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T11:41:29.264+06:00  INFO 10472 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 10472 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T11:41:29.266+06:00  INFO 10472 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T11:41:29.296+06:00  INFO 10472 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T11:41:29.297+06:00  INFO 10472 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T11:41:29.720+06:00  INFO 10472 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T11:41:29.728+06:00  INFO 10472 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T11:41:29.729+06:00  INFO 10472 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T11:41:29.749+06:00  INFO 10472 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 452 ms
+2026-07-15T11:41:29.806+06:00  INFO 10472 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T11:41:29.951+06:00  INFO 10472 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T11:41:29.955+06:00  INFO 10472 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.957 seconds (process running for 1.341)
+2026-07-15T11:41:55.245+06:00  INFO 10472 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T11:41:55.248+06:00  INFO 10472 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T11:41:57.498+06:00  INFO 5428 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 5428 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T11:41:57.500+06:00  INFO 5428 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T11:41:57.530+06:00  INFO 5428 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T11:41:57.531+06:00  INFO 5428 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T11:41:57.967+06:00  INFO 5428 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T11:41:57.975+06:00  INFO 5428 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T11:41:57.976+06:00  INFO 5428 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T11:41:58.004+06:00  INFO 5428 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 473 ms
+2026-07-15T11:41:58.055+06:00  INFO 5428 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T11:41:58.201+06:00  INFO 5428 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T11:41:58.205+06:00  INFO 5428 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.977 seconds (process running for 1.362)
+2026-07-15T11:42:00.989+06:00  INFO 5428 --- [class-4_routing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T11:42:00.990+06:00  INFO 5428 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T11:42:00.990+06:00  INFO 5428 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-15T11:43:46.399+06:00  INFO 5428 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T11:43:46.402+06:00  INFO 5428 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T11:43:47.578+06:00  INFO 12436 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 12436 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T11:43:47.580+06:00  INFO 12436 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T11:43:47.609+06:00  INFO 12436 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T11:43:47.609+06:00  INFO 12436 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T11:43:48.030+06:00  INFO 12436 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T11:43:48.037+06:00  INFO 12436 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T11:43:48.038+06:00  INFO 12436 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T11:43:48.066+06:00  INFO 12436 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 457 ms
+2026-07-15T11:43:48.115+06:00  INFO 12436 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T11:43:48.264+06:00  INFO 12436 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T11:43:48.267+06:00  INFO 12436 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.97 seconds (process running for 1.359)
+2026-07-15T11:43:50.621+06:00  INFO 12436 --- [class-4_routing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T11:43:50.621+06:00  INFO 12436 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T11:43:50.622+06:00  INFO 12436 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-15T11:46:15.992+06:00  INFO 12436 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T11:46:15.995+06:00  INFO 12436 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T11:46:17.380+06:00  INFO 3848 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 3848 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T11:46:17.382+06:00  INFO 3848 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T11:46:17.412+06:00  INFO 3848 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T11:46:17.413+06:00  INFO 3848 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T11:46:17.841+06:00  INFO 3848 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T11:46:17.849+06:00  INFO 3848 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T11:46:17.850+06:00  INFO 3848 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T11:46:17.875+06:00  INFO 3848 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 462 ms
+2026-07-15T11:46:17.924+06:00  INFO 3848 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T11:46:18.062+06:00  INFO 3848 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T11:46:18.066+06:00  INFO 3848 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.94 seconds (process running for 1.336)
+2026-07-15T11:46:22.501+06:00  INFO 3848 --- [class-4_routing] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T11:46:22.502+06:00  INFO 3848 --- [class-4_routing] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T11:46:22.502+06:00  INFO 3848 --- [class-4_routing] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-15T11:46:26.800+06:00  INFO 3848 --- [class-4_routing] [http-nio-8080-exec-1] com.seu.class4_routing.IndexController   : contact form submitted
+2026-07-15T11:48:11.232+06:00  INFO 3848 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T11:48:11.235+06:00  INFO 3848 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T11:48:13.596+06:00  INFO 4836 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 4836 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T11:48:13.598+06:00  INFO 4836 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T11:48:13.629+06:00  INFO 4836 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T11:48:13.629+06:00  INFO 4836 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T11:48:14.069+06:00  INFO 4836 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T11:48:14.077+06:00  INFO 4836 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T11:48:14.077+06:00  INFO 4836 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T11:48:14.103+06:00  INFO 4836 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 473 ms
+2026-07-15T11:48:14.153+06:00  INFO 4836 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T11:48:14.297+06:00  INFO 4836 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T11:48:14.301+06:00  INFO 4836 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.959 seconds (process running for 1.374)
+2026-07-15T11:48:17.919+06:00  INFO 4836 --- [class-4_routing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T11:48:17.919+06:00  INFO 4836 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T11:48:17.920+06:00  INFO 4836 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-15T11:48:17.933+06:00  WARN 4836 --- [class-4_routing] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-07-15T11:48:26.949+06:00  WARN 4836 --- [class-4_routing] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T11:49:22.239+06:00  INFO 4836 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T11:49:22.242+06:00  INFO 4836 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T11:49:23.720+06:00  INFO 4896 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 4896 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T11:49:23.722+06:00  INFO 4896 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T11:49:23.752+06:00  INFO 4896 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T11:49:23.753+06:00  INFO 4896 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T11:49:24.183+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T11:49:24.191+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T11:49:24.191+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T11:49:24.218+06:00  INFO 4896 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 465 ms
+2026-07-15T11:49:24.268+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T11:49:24.405+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T11:49:24.408+06:00  INFO 4896 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.95 seconds (process running for 1.343)
+2026-07-15T11:49:27.197+06:00  INFO 4896 --- [class-4_routing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T11:49:27.197+06:00  INFO 4896 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T11:49:27.198+06:00  INFO 4896 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-15T11:49:27.209+06:00  WARN 4896 --- [class-4_routing] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T11:49:28.296+06:00  WARN 4896 --- [class-4_routing] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T11:49:28.663+06:00  WARN 4896 --- [class-4_routing] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T11:49:28.823+06:00  WARN 4896 --- [class-4_routing] [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T11:50:53.447+06:00  WARN 4896 --- [class-4_routing] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T11:51:35.903+06:00  WARN 4896 --- [class-4_routing] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T11:51:36.471+06:00  INFO 4896 --- [class-4_routing] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-07-15T11:51:36.474+06:00  INFO 4896 --- [class-4_routing] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T11:51:36.477+06:00  INFO 4896 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T11:51:36.522+06:00  INFO 4896 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 4896 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T11:51:36.522+06:00  INFO 4896 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T11:51:36.607+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T11:51:36.608+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T11:51:36.608+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T11:51:36.620+06:00  INFO 4896 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 96 ms
+2026-07-15T11:51:36.631+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T11:51:36.655+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T11:51:36.656+06:00  INFO 4896 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.148 seconds (process running for 133.591)
+2026-07-15T11:51:36.657+06:00  INFO 4896 --- [class-4_routing] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-15T11:51:36.888+06:00  INFO 4896 --- [class-4_routing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T11:51:36.888+06:00  INFO 4896 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T11:51:36.889+06:00  INFO 4896 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-15T11:51:36.889+06:00  WARN 4896 --- [class-4_routing] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T11:51:36.967+06:00  WARN 4896 --- [class-4_routing] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T11:51:37.375+06:00  WARN 4896 --- [class-4_routing] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T11:51:37.767+06:00  WARN 4896 --- [class-4_routing] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T11:51:38.191+06:00  WARN 4896 --- [class-4_routing] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T11:52:11.450+06:00  INFO 4896 --- [class-4_routing] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-07-15T11:52:11.451+06:00  INFO 4896 --- [class-4_routing] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T11:52:11.454+06:00  INFO 4896 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T11:52:11.500+06:00  INFO 4896 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 4896 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T11:52:11.500+06:00  INFO 4896 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T11:52:11.584+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T11:52:11.584+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T11:52:11.584+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T11:52:11.593+06:00  INFO 4896 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 92 ms
+2026-07-15T11:52:11.603+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T11:52:11.626+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T11:52:11.628+06:00  INFO 4896 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.141 seconds (process running for 168.562)
+2026-07-15T11:52:11.628+06:00  INFO 4896 --- [class-4_routing] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-15T11:52:13.027+06:00  INFO 4896 --- [class-4_routing] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-07-15T11:52:13.027+06:00  INFO 4896 --- [class-4_routing] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T11:52:13.030+06:00  INFO 4896 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T11:52:13.068+06:00  INFO 4896 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 4896 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T11:52:13.069+06:00  INFO 4896 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T11:52:13.131+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T11:52:13.131+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T11:52:13.131+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T11:52:13.138+06:00  INFO 4896 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 68 ms
+2026-07-15T11:52:13.146+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T11:52:13.165+06:00  INFO 4896 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T11:52:13.166+06:00  INFO 4896 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.11 seconds (process running for 170.101)
+2026-07-15T11:52:13.166+06:00  INFO 4896 --- [class-4_routing] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-15T11:59:38.552+06:00  INFO 4896 --- [class-4_routing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T11:59:38.553+06:00  INFO 4896 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T11:59:38.554+06:00  INFO 4896 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-15T11:59:38.554+06:00  WARN 4896 --- [class-4_routing] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T11:59:38.982+06:00  WARN 4896 --- [class-4_routing] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T11:59:39.198+06:00  WARN 4896 --- [class-4_routing] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T11:59:39.463+06:00  WARN 4896 --- [class-4_routing] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T12:02:03.071+06:00  INFO 4896 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T12:02:03.074+06:00  INFO 4896 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T12:02:05.348+06:00  INFO 10496 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 10496 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T12:02:05.350+06:00  INFO 10496 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T12:02:05.381+06:00  INFO 10496 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T12:02:05.382+06:00  INFO 10496 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T12:02:05.808+06:00  INFO 10496 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T12:02:05.815+06:00  INFO 10496 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T12:02:05.816+06:00  INFO 10496 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T12:02:05.835+06:00  INFO 10496 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 453 ms
+2026-07-15T12:02:05.894+06:00  INFO 10496 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T12:02:06.041+06:00  INFO 10496 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T12:02:06.045+06:00  INFO 10496 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.959 seconds (process running for 1.344)
+2026-07-15T12:02:09.286+06:00  INFO 10496 --- [class-4_routing] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T12:02:09.287+06:00  INFO 10496 --- [class-4_routing] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T12:02:09.287+06:00  INFO 10496 --- [class-4_routing] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-15T12:02:09.300+06:00  WARN 10496 --- [class-4_routing] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T12:02:09.705+06:00  WARN 10496 --- [class-4_routing] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T12:02:09.952+06:00  WARN 10496 --- [class-4_routing] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T12:02:10.112+06:00  WARN 10496 --- [class-4_routing] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T12:03:30.672+06:00  INFO 10496 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T12:03:30.674+06:00  INFO 10496 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T12:03:32.053+06:00  INFO 12708 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 12708 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T12:03:32.055+06:00  INFO 12708 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T12:03:32.085+06:00  INFO 12708 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T12:03:32.085+06:00  INFO 12708 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T12:03:32.507+06:00  INFO 12708 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T12:03:32.515+06:00  INFO 12708 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T12:03:32.515+06:00  INFO 12708 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T12:03:32.535+06:00  INFO 12708 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 450 ms
+2026-07-15T12:03:32.592+06:00  INFO 12708 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T12:03:32.730+06:00  INFO 12708 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T12:03:32.733+06:00  INFO 12708 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.941 seconds (process running for 1.323)
+2026-07-15T12:03:38.812+06:00  INFO 12708 --- [class-4_routing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T12:03:38.812+06:00  INFO 12708 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T12:03:38.812+06:00  INFO 12708 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-15T12:03:38.824+06:00  WARN 12708 --- [class-4_routing] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T12:03:39.295+06:00  WARN 12708 --- [class-4_routing] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T12:03:39.535+06:00  WARN 12708 --- [class-4_routing] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T12:03:39.743+06:00  WARN 12708 --- [class-4_routing] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T12:03:39.943+06:00  WARN 12708 --- [class-4_routing] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T12:06:00.745+06:00  INFO 12708 --- [class-4_routing] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-07-15T12:06:00.748+06:00  INFO 12708 --- [class-4_routing] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T12:06:00.751+06:00  INFO 12708 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T12:06:00.796+06:00  INFO 12708 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 12708 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T12:06:00.796+06:00  INFO 12708 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T12:06:00.883+06:00  INFO 12708 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T12:06:00.883+06:00  INFO 12708 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T12:06:00.884+06:00  INFO 12708 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T12:06:00.893+06:00  INFO 12708 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 95 ms
+2026-07-15T12:06:00.903+06:00  INFO 12708 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T12:06:00.928+06:00  INFO 12708 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T12:06:00.929+06:00  INFO 12708 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.146 seconds (process running for 149.52)
+2026-07-15T12:06:00.930+06:00  INFO 12708 --- [class-4_routing] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-15T12:06:35.741+06:00  INFO 12708 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T12:06:35.743+06:00  INFO 12708 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T12:06:37.009+06:00  INFO 12500 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 12500 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T12:06:37.011+06:00  INFO 12500 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T12:06:37.043+06:00  INFO 12500 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T12:06:37.043+06:00  INFO 12500 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T12:06:37.469+06:00  INFO 12500 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T12:06:37.477+06:00  INFO 12500 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T12:06:37.477+06:00  INFO 12500 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T12:06:37.502+06:00  INFO 12500 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 458 ms
+2026-07-15T12:06:37.554+06:00  INFO 12500 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T12:06:37.697+06:00  INFO 12500 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T12:06:37.700+06:00  INFO 12500 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.961 seconds (process running for 1.353)
+2026-07-15T12:06:40.630+06:00  INFO 12500 --- [class-4_routing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T12:06:40.630+06:00  INFO 12500 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T12:06:40.631+06:00  INFO 12500 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-15T12:06:40.643+06:00  WARN 12500 --- [class-4_routing] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T12:06:59.511+06:00  INFO 12500 --- [class-4_routing] [http-nio-8080-exec-3] com.seu.class4_routing.IndexController   : contact form submitted Contact(name=asdf, email=rjbaitulhoquebappi@gmail.com, message=asdf)
+2026-07-15T12:07:44.503+06:00  INFO 12500 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T12:07:44.506+06:00  INFO 12500 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T12:07:46.822+06:00  INFO 1932 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 1932 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T12:07:46.824+06:00  INFO 1932 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T12:07:46.852+06:00  INFO 1932 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T12:07:46.853+06:00  INFO 1932 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T12:07:47.279+06:00  INFO 1932 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T12:07:47.286+06:00  INFO 1932 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T12:07:47.287+06:00  INFO 1932 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T12:07:47.313+06:00  INFO 1932 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 460 ms
+2026-07-15T12:07:47.363+06:00  INFO 1932 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T12:07:47.505+06:00  INFO 1932 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T12:07:47.509+06:00  INFO 1932 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.948 seconds (process running for 1.324)
+2026-07-15T12:07:50.282+06:00  INFO 1932 --- [class-4_routing] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T12:07:50.282+06:00  INFO 1932 --- [class-4_routing] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T12:07:50.283+06:00  INFO 1932 --- [class-4_routing] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-15T12:07:53.440+06:00  INFO 1932 --- [class-4_routing] [http-nio-8080-exec-1] com.seu.class4_routing.IndexController   : contact form submitted Contact(name=fgyj, email=rjbaitulhoquebappi@gmail.com, message=sdfh)
+2026-07-15T12:08:48.434+06:00  INFO 1932 --- [class-4_routing] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-07-15T12:08:48.437+06:00  INFO 1932 --- [class-4_routing] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T12:08:48.440+06:00  INFO 1932 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T12:08:48.490+06:00  INFO 1932 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 1932 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T12:08:48.490+06:00  INFO 1932 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T12:08:48.576+06:00  INFO 1932 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T12:08:48.576+06:00  INFO 1932 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T12:08:48.576+06:00  INFO 1932 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T12:08:48.585+06:00  INFO 1932 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 93 ms
+2026-07-15T12:08:48.595+06:00  INFO 1932 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T12:08:48.623+06:00  INFO 1932 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T12:08:48.624+06:00  INFO 1932 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.148 seconds (process running for 62.439)
+2026-07-15T12:08:48.626+06:00  INFO 1932 --- [class-4_routing] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-15T12:08:48.877+06:00  INFO 1932 --- [class-4_routing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T12:08:48.877+06:00  INFO 1932 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T12:08:48.877+06:00  INFO 1932 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-15T12:08:50.023+06:00  INFO 1932 --- [class-4_routing] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-07-15T12:08:50.024+06:00  INFO 1932 --- [class-4_routing] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T12:08:50.026+06:00  INFO 1932 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T12:08:50.070+06:00  INFO 1932 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 1932 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T12:08:50.070+06:00  INFO 1932 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T12:08:50.137+06:00  INFO 1932 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T12:08:50.138+06:00  INFO 1932 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T12:08:50.138+06:00  INFO 1932 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T12:08:50.145+06:00  INFO 1932 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 74 ms
+2026-07-15T12:08:50.154+06:00  INFO 1932 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T12:08:50.174+06:00  INFO 1932 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T12:08:50.176+06:00  INFO 1932 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.119 seconds (process running for 63.99)
+2026-07-15T12:08:50.176+06:00  INFO 1932 --- [class-4_routing] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-15T12:08:56.243+06:00  INFO 1932 --- [class-4_routing] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T12:08:56.243+06:00  INFO 1932 --- [class-4_routing] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T12:08:56.244+06:00  INFO 1932 --- [class-4_routing] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-15T12:10:12.482+06:00  INFO 1932 --- [class-4_routing] [http-nio-8080-exec-6] com.seu.class4_routing.IndexController   : contact form submitted Contact(name=esrg, email=rjbaitulhoquebappi@gmail.com, message=serg)
+2026-07-15T12:14:43.832+06:00  INFO 1932 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T12:14:43.834+06:00  INFO 1932 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T12:14:45.479+06:00  INFO 364 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 364 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T12:14:45.481+06:00  INFO 364 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T12:14:45.511+06:00  INFO 364 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T12:14:45.511+06:00  INFO 364 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T12:14:45.942+06:00  INFO 364 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T12:14:45.949+06:00  INFO 364 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T12:14:45.950+06:00  INFO 364 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T12:14:45.977+06:00  INFO 364 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 465 ms
+2026-07-15T12:14:46.026+06:00  INFO 364 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T12:14:46.167+06:00  INFO 364 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T12:14:46.170+06:00  INFO 364 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.947 seconds (process running for 1.329)
+2026-07-15T12:15:13.963+06:00  INFO 364 --- [class-4_routing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T12:15:13.963+06:00  INFO 364 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T12:15:13.964+06:00  INFO 364 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-15T12:15:13.976+06:00  WARN 364 --- [class-4_routing] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T12:15:30.840+06:00  INFO 364 --- [class-4_routing] [http-nio-8080-exec-3] com.seu.class4_routing.IndexController   : contact form submitted Contact(name=sdfg, email=rjbaitulhoquebappi@gmail.com, message=sdfg)
+2026-07-15T12:17:08.644+06:00  WARN 364 --- [class-4_routing] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-07-15T12:17:32.521+06:00  INFO 364 --- [class-4_routing] [http-nio-8080-exec-4] com.seu.class4_routing.IndexController   : contact form submitted Contact(name=asdf, email=rjbaitulhoquebappi@gmail.com, message=asdf)
+2026-07-15T12:22:48.352+06:00  INFO 364 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T12:22:48.355+06:00  INFO 364 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T12:22:50.801+06:00  INFO 10232 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 10232 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T12:22:50.803+06:00  INFO 10232 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T12:22:50.838+06:00  INFO 10232 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T12:22:50.838+06:00  INFO 10232 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T12:22:51.279+06:00  INFO 10232 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T12:22:51.287+06:00  INFO 10232 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T12:22:51.287+06:00  INFO 10232 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T12:22:51.312+06:00  INFO 10232 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 473 ms
+2026-07-15T12:22:51.365+06:00  INFO 10232 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T12:22:51.507+06:00  INFO 10232 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T12:22:51.510+06:00  INFO 10232 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.963 seconds (process running for 1.324)
+2026-07-15T12:23:01.675+06:00  INFO 10232 --- [class-4_routing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T12:23:01.676+06:00  INFO 10232 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T12:23:01.676+06:00  INFO 10232 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-15T12:24:29.054+06:00  INFO 10232 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T12:24:29.058+06:00  INFO 10232 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T12:24:31.429+06:00  INFO 11088 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 11088 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T12:24:31.431+06:00  INFO 11088 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T12:24:31.465+06:00  INFO 11088 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T12:24:31.465+06:00  INFO 11088 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T12:24:31.887+06:00  INFO 11088 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T12:24:31.895+06:00  INFO 11088 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T12:24:31.895+06:00  INFO 11088 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T12:24:31.915+06:00  INFO 11088 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 450 ms
+2026-07-15T12:24:31.975+06:00  INFO 11088 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T12:24:32.119+06:00  INFO 11088 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T12:24:32.123+06:00  INFO 11088 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.947 seconds (process running for 1.326)
+2026-07-15T12:24:35.140+06:00  INFO 11088 --- [class-4_routing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T12:24:35.140+06:00  INFO 11088 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T12:24:35.141+06:00  INFO 11088 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-15T12:25:14.321+06:00  INFO 11088 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T12:25:14.325+06:00  INFO 11088 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T12:25:15.738+06:00  INFO 2148 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 2148 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T12:25:15.740+06:00  INFO 2148 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T12:25:15.771+06:00  INFO 2148 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T12:25:15.771+06:00  INFO 2148 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T12:25:16.295+06:00  INFO 2148 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T12:25:16.303+06:00  INFO 2148 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T12:25:16.303+06:00  INFO 2148 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T12:25:16.327+06:00  INFO 2148 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 555 ms
+2026-07-15T12:25:16.395+06:00  INFO 2148 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T12:25:16.567+06:00  INFO 2148 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T12:25:16.572+06:00  INFO 2148 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 1.116 seconds (process running for 1.546)
+2026-07-15T12:25:17.118+06:00  INFO 2148 --- [class-4_routing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T12:25:17.119+06:00  INFO 2148 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T12:25:17.119+06:00  INFO 2148 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-15T12:25:57.159+06:00  INFO 2148 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T12:25:57.162+06:00  INFO 2148 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T12:25:58.486+06:00  INFO 7256 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 7256 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T12:25:58.488+06:00  INFO 7256 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T12:25:58.518+06:00  INFO 7256 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T12:25:58.518+06:00  INFO 7256 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T12:25:58.945+06:00  INFO 7256 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T12:25:58.952+06:00  INFO 7256 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T12:25:58.953+06:00  INFO 7256 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T12:25:58.974+06:00  INFO 7256 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 456 ms
+2026-07-15T12:25:59.030+06:00  INFO 7256 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T12:25:59.167+06:00  INFO 7256 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T12:25:59.170+06:00  INFO 7256 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.944 seconds (process running for 1.325)
+2026-07-15T12:26:00.661+06:00  INFO 7256 --- [class-4_routing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T12:26:00.661+06:00  INFO 7256 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T12:26:00.661+06:00  INFO 7256 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-15T12:26:10.329+06:00  INFO 7256 --- [class-4_routing] [http-nio-8080-exec-2] com.seu.class4_routing.IndexController   : Submit student form Student(name=rtiytry, id=23, email=rjbaitulhoquebappi@gmail.com, password=arwer)
+2026-07-15T12:27:12.216+06:00  INFO 7256 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T12:27:12.218+06:00  INFO 7256 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T12:27:14.467+06:00  INFO 7888 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 7888 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T12:27:14.468+06:00  INFO 7888 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T12:27:14.498+06:00  INFO 7888 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T12:27:14.498+06:00  INFO 7888 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T12:27:14.915+06:00  INFO 7888 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T12:27:14.923+06:00  INFO 7888 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T12:27:14.923+06:00  INFO 7888 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T12:27:14.943+06:00  INFO 7888 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 445 ms
+2026-07-15T12:27:15.002+06:00  INFO 7888 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T12:27:15.144+06:00  INFO 7888 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T12:27:15.147+06:00  INFO 7888 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.934 seconds (process running for 1.315)
+2026-07-15T12:27:17.688+06:00  INFO 7888 --- [class-4_routing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T12:27:17.688+06:00  INFO 7888 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T12:27:17.689+06:00  INFO 7888 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-15T12:27:25.192+06:00  INFO 7888 --- [class-4_routing] [http-nio-8080-exec-2] com.seu.class4_routing.IndexController   : Submit student form Student(name=wey, id=34, email=rjbaitulhoquebappi@gmail.com, password=dfg)
+2026-07-15T12:28:48.806+06:00  INFO 7888 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T12:28:48.810+06:00  INFO 7888 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T12:28:51.050+06:00  INFO 3512 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 3512 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T12:28:51.052+06:00  INFO 3512 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T12:28:51.090+06:00  INFO 3512 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T12:28:51.090+06:00  INFO 3512 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T12:28:51.580+06:00  INFO 3512 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T12:28:51.589+06:00  INFO 3512 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T12:28:51.589+06:00  INFO 3512 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T12:28:51.613+06:00  INFO 3512 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 522 ms
+2026-07-15T12:28:51.680+06:00  INFO 3512 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T12:28:51.855+06:00  INFO 3512 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T12:28:51.858+06:00  INFO 3512 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 1.077 seconds (process running for 1.443)
+2026-07-15T12:28:55.889+06:00  INFO 3512 --- [class-4_routing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T12:28:55.890+06:00  INFO 3512 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T12:28:55.891+06:00  INFO 3512 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-15T12:29:07.121+06:00  INFO 3512 --- [class-4_routing] [http-nio-8080-exec-2] com.seu.class4_routing.IndexController   : Submit student form Student(name=sdfg, id=34, email=rjbaitulhoquebappi@gmail.com, password=fgh)
+2026-07-15T12:29:45.319+06:00  INFO 3512 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T12:29:45.323+06:00  INFO 3512 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T12:29:47.529+06:00  INFO 12932 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 12932 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T12:29:47.530+06:00  INFO 12932 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T12:29:47.559+06:00  INFO 12932 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T12:29:47.559+06:00  INFO 12932 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T12:29:47.985+06:00  INFO 12932 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T12:29:47.993+06:00  INFO 12932 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T12:29:47.994+06:00  INFO 12932 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T12:29:48.014+06:00  INFO 12932 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 455 ms
+2026-07-15T12:29:48.073+06:00  INFO 12932 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T12:29:48.212+06:00  INFO 12932 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T12:29:48.215+06:00  INFO 12932 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.946 seconds (process running for 1.305)
+2026-07-15T12:29:52.466+06:00  INFO 12932 --- [class-4_routing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T12:29:52.467+06:00  INFO 12932 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T12:29:52.467+06:00  INFO 12932 --- [class-4_routing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-15T12:30:57.117+06:00  INFO 12932 --- [class-4_routing] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-07-15T12:30:57.120+06:00  INFO 12932 --- [class-4_routing] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T12:30:57.123+06:00  INFO 12932 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T12:30:57.180+06:00  INFO 12932 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 12932 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T12:30:57.180+06:00  INFO 12932 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T12:30:57.261+06:00  INFO 12932 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T12:30:57.262+06:00  INFO 12932 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T12:30:57.262+06:00  INFO 12932 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T12:30:57.270+06:00  INFO 12932 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 89 ms
+2026-07-15T12:30:57.280+06:00  INFO 12932 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T12:30:57.305+06:00  INFO 12932 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T12:30:57.306+06:00  INFO 12932 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.146 seconds (process running for 70.396)
+2026-07-15T12:30:57.307+06:00  INFO 12932 --- [class-4_routing] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-15T18:32:58.807+06:00  INFO 12932 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T18:32:58.810+06:00  INFO 12932 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-15T18:33:01.075+06:00  INFO 14620 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Starting Class4RoutingApplication using Java 25.0.3 with PID 14620 (C:\Users\student\Documents\wolfgang\class-5\target\classes started by student in C:\Users\student\Documents\wolfgang\class-5)
+2026-07-15T18:33:01.078+06:00  INFO 14620 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-15T18:33:01.110+06:00  INFO 14620 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-15T18:33:01.110+06:00  INFO 14620 --- [class-4_routing] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-15T18:33:01.538+06:00  INFO 14620 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-15T18:33:01.545+06:00  INFO 14620 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T18:33:01.546+06:00  INFO 14620 --- [class-4_routing] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-15T18:33:01.566+06:00  INFO 14620 --- [class-4_routing] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 455 ms
+2026-07-15T18:33:01.626+06:00  INFO 14620 --- [class-4_routing] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-15T18:33:01.769+06:00  INFO 14620 --- [class-4_routing] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T18:33:01.772+06:00  INFO 14620 --- [class-4_routing] [restartedMain] c.s.c.Class4RoutingApplication           : Started Class4RoutingApplication in 0.963 seconds (process running for 1.345)
+2026-07-15T18:33:04.109+06:00  INFO 14620 --- [class-4_routing] [http-nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-15T18:33:04.109+06:00  INFO 14620 --- [class-4_routing] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-15T18:33:04.110+06:00  INFO 14620 --- [class-4_routing] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-15T18:33:11.252+06:00  INFO 14620 --- [class-4_routing] [http-nio-8080-exec-2] com.seu.class4_routing.IndexController   : Submit student form Student(name=sdfgsdfg, id=23, email=rjbaitulhoquebappi@gmail.com, password=sdfg)
+2026-07-15T18:35:08.254+06:00  INFO 14620 --- [class-4_routing] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-15T18:35:08.257+06:00  INFO 14620 --- [class-4_routing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
