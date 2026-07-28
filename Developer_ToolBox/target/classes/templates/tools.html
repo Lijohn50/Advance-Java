@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Toolbox | Tool List</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    :root{
+
+      --primary:#23408e;
+      --primary-dark:#1b3170;
+
+      --success:#15803d;
+      --warning:#d97706;
+      --danger:#dc2626;
+
+      --background:#edf2f7;
+      --surface:#ffffff;
+
+      --text:#223041;
+      --muted:#738396;
+
+      --border:#dde4ec;
+
+      --shadow:0 14px 35px rgba(24,39,75,.08);
+
+      --radius:18px;
+
+    }
+
+    body{
+
+      font-family:'Inter',sans-serif;
+      background:var(--background);
+      color:var(--text);
+
+    }
+
+    /*========================*/
+
+    .navbar{
+
+      height:80px;
+      background:white;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      padding:0 60px;
+
+      box-shadow:0 2px 10px rgba(0,0,0,.05);
+
+    }
+
+    .logo{
+
+      font-size:28px;
+      font-weight:800;
+      color:var(--primary);
+
+    }
+
+    .logo span{
+
+      color:#0f766e;
+
+    }
+
+    .menu{
+
+      display:flex;
+      gap:14px;
+
+    }
+
+    .menu a{
+
+      text-decoration:none;
+      color:var(--text);
+
+      padding:12px 20px;
+
+      border-radius:12px;
+
+      font-weight:600;
+
+      transition:.25s;
+
+    }
+
+    .menu a:hover{
+
+      background:#edf4ff;
+
+    }
+
+    .menu .active{
+
+      background:var(--primary);
+      color:white;
+
+    }
+
+    /*========================*/
+
+    .container{
+
+      width:min(1250px,94%);
+      margin:40px auto;
+
+    }
+
+    /*========================*/
+
+    .header{
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      margin-bottom:30px;
+
+      gap:20px;
+      flex-wrap:wrap;
+
+    }
+
+    .header h1{
+
+      font-size:34px;
+      margin-bottom:8px;
+
+    }
+
+    .header p{
+
+      color:var(--muted);
+
+    }
+
+    /*========================*/
+
+    .toolbar{
+
+      background:white;
+
+      padding:22px;
+
+      border-radius:18px;
+
+      box-shadow:var(--shadow);
+
+      display:flex;
+
+      gap:18px;
+
+      flex-wrap:wrap;
+
+      align-items:center;
+
+      margin-bottom:30px;
+
+    }
+
+    .search{
+
+      flex:1;
+
+    }
+
+    .search input{
+
+      width:100%;
+
+      padding:15px 18px;
+
+      border:1px solid var(--border);
+
+      border-radius:14px;
+
+      outline:none;
+
+      font-size:15px;
+
+    }
+
+    .search input:focus{
+
+      border-color:var(--primary);
+
+    }
+
+    select{
+
+      padding:15px 18px;
+
+      border-radius:14px;
+
+      border:1px solid var(--border);
+
+      background:white;
+
+      font-size:15px;
+
+      outline:none;
+
+    }
+
+    .button{
+
+      text-decoration:none;
+
+      background:var(--primary);
+
+      color:white;
+
+      padding:15px 22px;
+
+      border-radius:14px;
+
+      font-weight:600;
+
+      transition:.25s;
+
+    }
+
+    .button:hover{
+
+      background:var(--primary-dark);
+
+    }
+
+    /*========================*/
+
+    .table-card{
+
+      background:white;
+
+      border-radius:18px;
+
+      box-shadow:var(--shadow);
+
+      overflow:hidden;
+
+    }
+
+    table{
+
+      width:100%;
+
+      border-collapse:collapse;
+
+    }
+
+    thead{
+
+      background:#f5f8fb;
+
+    }
+
+    th{
+
+      text-align:left;
+
+      padding:18px;
+
+      color:#52657a;
+
+      font-size:14px;
+
+    }
+
+    td{
+
+      padding:18px;
+
+      border-top:1px solid #edf1f5;
+
+      vertical-align:middle;
+
+    }
+
+    tbody tr{
+
+      transition:.2s;
+
+    }
+
+    tbody tr:hover{
+
+      background:#f9fbfd;
+
+    }
+
+    /*========================*/
+
+    .badge{
+
+      display:inline-block;
+
+      padding:8px 14px;
+
+      border-radius:30px;
+
+      font-size:13px;
+
+      font-weight:600;
+
+    }
+
+    .backend{
+
+      background:#dbeafe;
+      color:#1d4ed8;
+
+    }
+
+    .frontend{
+
+      background:#dcfce7;
+      color:#166534;
+
+    }
+
+    .database{
+
+      background:#fff7d6;
+      color:#a16207;
+
+    }
+
+    .utility{
+
+      background:#ede9fe;
+      color:#6d28d9;
+
+    }
+
+    .actions{
+
+      display:flex;
+      gap:10px;
+
+    }
+
+    .btn{
+
+      text-decoration:none;
+
+      padding:8px 14px;
+
+      border-radius:10px;
+
+      font-size:13px;
+
+      font-weight:600;
+
+    }
+
+    .view{
+
+      background:#dbeafe;
+      color:#1d4ed8;
+
+    }
+
+    .edit{
+
+      background:#dcfce7;
+      color:#166534;
+
+    }
+
+    .delete{
+
+      background:#fee2e2;
+      color:#b91c1c;
+
+    }
+
+    .btn:hover{
+
+      opacity:.85;
+
+    }
+
+    /*========================*/
+
+    tfoot{
+
+      background:#fafbfc;
+
+    }
+
+    tfoot td{
+
+      padding:18px;
+
+    }
+
+    .pagination{
+
+      display:flex;
+
+      justify-content:space-between;
+
+      align-items:center;
+
+      flex-wrap:wrap;
+
+    }
+
+    .pages{
+
+      display:flex;
+
+      gap:10px;
+
+    }
+
+    .page{
+
+      width:38px;
+      height:38px;
+
+      border-radius:10px;
+
+      display:flex;
+
+      justify-content:center;
+
+      align-items:center;
+
+      text-decoration:none;
+
+      color:var(--text);
+
+      background:#eef3f8;
+
+    }
+
+    .page.active{
+
+      background:var(--primary);
+
+      color:white;
+
+    }
+
+    /*========================*/
+
+    @media(max-width:900px){
+
+      .navbar{
+
+        padding:20px;
+        height:auto;
+        flex-direction:column;
+        gap:15px;
+
+      }
+
+      .menu{
+
+        flex-wrap:wrap;
+        justify-content:center;
+
+      }
+
+      .toolbar{
+
+        flex-direction:column;
+
+      }
+
+      .search{
+
+        width:100%;
+
+      }
+
+      table{
+
+        display:block;
+        overflow-x:auto;
+
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar">
+
+  <div class="logo">
+    My<span>Toolbox</span>
+  </div>
+
+  <div class="menu">
+
+    <a href="/home/dashboard">Dashboard</a>
+
+    <a href="/home/tools" class="active">Tools</a>
+
+    <a href="/home/form">Add Tool</a>
+
+  </div>
+
+</nav>
+
+<div class="container">
+
+  <div class="header">
+
+    <div>
+
+      <h1>Tool Library</h1>
+
+      <p>Browse, edit and manage every development tool in your collection.</p>
+
+    </div>
+
+    <a href="/home/form" class="button">
+      + Add New Tool
+    </a>
+
+  </div>
+
+  <div class="toolbar">
+
+    <div class="search">
+
+      <input
+              type="text"
+              placeholder="Search by tool name...">
+
+    </div>
+
+    <form th:action="@{/home/tools}">
+      <select name="category" onchange="this.form.submit()">
+        <option value="">All Categories</option>
+        <option value="Backend">Backend</option>
+        <option value="Frontend">Frontend</option>
+        <option value="Database">Database</option>
+        <option value="Utility">Utility</option>
+      </select>
+    </form>
+  </div>
+
+  <div class="table-card">
+
+    <table th:unless="${tool.isEmpty()}">
+
+      <thead>
+
+      <tr>
+
+        <th>Name</th>
+
+        <th>Category</th>
+
+        <th>Platform</th>
+
+        <th>Version</th>
+
+        <th>Actions</th>
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+      <tr th:each="tools: ${tool}">
+
+        <td th:text="${tools.toolName}">Spring Boot</td>
+
+        <td th:text="${tools.category}"><span class="badge backend">Backend</span></td>
+
+        <td th:text="${tools.toolDetails.platform}">Cross Platform</td>
+
+        <td th:text="${tools.toolDetails.version}">3.5.0</td>
+
+        <td>
+          <div class="actions">
+            <a th:href="@{'/home/edit/'+ ${tools.id}}" class="btn edit">Edit</a>
+            <a th:href="@{'/home/tools/'+ ${tools.id}}" class="btn delete">Delete</a>
+          </div>
+
+        </td>
+
+      </tr>
+
+      </tbody>
+
+      <tfoot>
+
+      <tr>
+
+        <td colspan="6">
+
+          <div class="pagination">
+
+            <div>
+
+              Showing <strong>1-6</strong> of <strong>24</strong> tools
+
+            </div>
+
+            <div class="pages">
+
+              <a href="#" class="page active">1</a>
+
+              <a href="#" class="page">2</a>
+
+              <a href="#" class="page">3</a>
+
+            </div>
+
+          </div>
+
+        </td>
+
+      </tr>
+
+      </tfoot>
+
+    </table>
+
+  </div>
+
+</div>
+
+</body>
+</html>

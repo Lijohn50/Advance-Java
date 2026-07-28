@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tool License</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Inter',sans-serif;
+            background:#edf2f7;
+            color:#223041;
+        }
+
+        :root{
+
+            --primary:#23408e;
+            --primary-dark:#1b3170;
+            --secondary:#0f766e;
+
+            --surface:#ffffff;
+            --border:#dce4ec;
+            --text:#223041;
+            --muted:#738396;
+
+            --radius:18px;
+
+            --shadow:0 15px 35px rgba(30,41,59,.08);
+
+        }
+
+        /*================ NAVBAR ================*/
+
+        .navbar{
+
+            height:80px;
+
+            background:white;
+
+            display:flex;
+
+            justify-content:space-between;
+
+            align-items:center;
+
+            padding:0 60px;
+
+            box-shadow:0 2px 10px rgba(0,0,0,.05);
+
+        }
+
+        .logo{
+
+            font-size:28px;
+
+            font-weight:800;
+
+            color:var(--primary);
+
+        }
+
+        .logo span{
+
+            color:var(--secondary);
+
+        }
+
+        .menu{
+
+            display:flex;
+
+            gap:15px;
+
+        }
+
+        .menu a{
+
+            text-decoration:none;
+
+            color:var(--text);
+
+            padding:12px 20px;
+
+            border-radius:12px;
+
+            font-weight:600;
+
+            transition:.25s;
+
+        }
+
+        .menu a:hover{
+
+            background:#eef4ff;
+
+        }
+
+        .menu .active{
+
+            background:var(--primary);
+
+            color:white;
+
+        }
+
+        /*================ CONTAINER ================*/
+
+        .container{
+
+            width:min(1050px,92%);
+
+            margin:45px auto;
+
+        }
+
+        .page-title{
+
+            margin-bottom:25px;
+
+        }
+
+        .page-title h1{
+
+            font-size:34px;
+
+            margin-bottom:10px;
+
+        }
+
+        .page-title p{
+
+            color:var(--muted);
+
+        }
+
+        /*================ FORM CARD ================*/
+
+        .form-card{
+
+            background:white;
+
+            border-radius:20px;
+
+            padding:40px;
+
+            box-shadow:var(--shadow);
+
+        }
+
+        /*================ GRID ================*/
+
+        .form-grid{
+
+            display:grid;
+
+            grid-template-columns:repeat(2,1fr);
+
+            gap:25px;
+
+        }
+
+        .full{
+
+            grid-column:1/-1;
+
+        }
+
+        /*================ FIELDS ================*/
+
+        .field{
+
+            display:flex;
+
+            flex-direction:column;
+
+        }
+
+        .field label{
+
+            font-size:14px;
+
+            font-weight:600;
+
+            margin-bottom:8px;
+
+            color:#445468;
+
+        }
+
+        .field input,
+        .field select,
+        .field textarea{
+
+            width:100%;
+
+            padding:15px 16px;
+
+            border:1px solid var(--border);
+
+            border-radius:14px;
+
+            font-size:15px;
+
+            font-family:inherit;
+
+            color:var(--text);
+
+            background:white;
+
+            outline:none;
+
+            transition:.25s;
+
+        }
+
+        .field textarea{
+
+            min-height:150px;
+
+            resize:vertical;
+
+        }
+
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus{
+
+            border-color:var(--primary);
+
+            box-shadow:0 0 0 4px rgba(35,64,142,.08);
+
+        }
+
+        .field small{
+
+            margin-top:6px;
+
+            color:var(--muted);
+
+            font-size:13px;
+
+        }
+
+        /*================ RATING ================*/
+
+        .rating{
+
+            display:flex;
+
+            gap:10px;
+
+            margin-top:5px;
+
+        }
+
+        .rating button{
+
+            width:48px;
+
+            height:48px;
+
+            border:none;
+
+            border-radius:12px;
+
+            background:#eef3fb;
+
+            cursor:pointer;
+
+            font-size:20px;
+
+            transition:.2s;
+
+        }
+
+        .rating button:hover{
+
+            background:#dce8ff;
+
+        }
+
+        /*================ NOTE ================*/
+
+        .note{
+
+            margin-top:35px;
+
+            padding:20px;
+
+            background:#f7f9fc;
+
+            border-left:5px solid var(--secondary);
+
+            border-radius:14px;
+
+        }
+
+        .note h3{
+
+            margin-bottom:10px;
+
+        }
+
+        .note p{
+
+            color:var(--muted);
+
+            line-height:1.7;
+
+        }
+
+        /*================ BUTTONS ================*/
+
+        .actions{
+
+            margin-top:35px;
+
+            display:flex;
+
+            justify-content:flex-end;
+
+            gap:15px;
+
+        }
+
+        .btn{
+
+            padding:14px 26px;
+
+            border:none;
+
+            border-radius:14px;
+
+            cursor:pointer;
+
+            text-decoration:none;
+
+            font-weight:600;
+
+            font-size:15px;
+
+            transition:.25s;
+
+        }
+
+        .cancel{
+
+            background:#edf2f7;
+
+            color:var(--text);
+
+        }
+
+        .cancel:hover{
+
+            background:#dde5ee;
+
+        }
+
+        .save{
+
+            background:var(--primary);
+
+            color:white;
+
+        }
+
+        .save:hover{
+
+            background:var(--primary-dark);
+
+        }
+
+        /*================ FOOTER ================*/
+
+        footer{
+
+            text-align:center;
+
+            padding:35px;
+
+            color:var(--muted);
+
+        }
+
+        /*================ RESPONSIVE ================*/
+
+        @media(max-width:850px){
+
+            .navbar{
+
+                height:auto;
+
+                padding:20px;
+
+                flex-direction:column;
+
+                gap:15px;
+
+            }
+
+            .menu{
+
+                flex-wrap:wrap;
+
+                justify-content:center;
+
+            }
+
+            .form-grid{
+
+                grid-template-columns:1fr;
+
+            }
+
+            .full{
+
+                grid-column:auto;
+
+            }
+
+            .form-card{
+
+                padding:25px;
+
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="page-title">
+
+        <h1>Tool License</h1>
+
+        <p>
+            Add or update the license information associated with this developer tool.
+        </p>
+
+    </div>
+
+    <div class="form-card">
+
+        <form th:action="@{/home/license}"
+              method="post"
+              th:object="${toolLicense}">
+
+            <div class="form-grid">
+
+                <!-- License Type -->
+                <div class="field">
+
+                    <label for="licenseType">License Type *</label>
+
+                    <select id="licenseType"
+                            th:field="*{licenseType}">
+
+                        <option value="">Select License Type</option>
+                        <option value="Open Source">Open Source</option>
+                        <option value="Freeware">Freeware</option>
+                        <option value="Commercial">Commercial</option>
+                        <option value="Subscription">Subscription</option>
+                        <option value="Enterprise">Enterprise</option>
+
+                    </select>
+
+                    <small>Select the software license type.</small>
+
+                </div>
+
+                <!-- Vendor -->
+                <div class="field">
+
+                    <label for="vendor">Vendor *</label>
+
+                    <input
+                            id="vendor"
+                            type="text"
+                            placeholder="JetBrains"
+                            th:field="*{vendor}">
+
+                    <small>Company or organization providing the license.</small>
+
+                </div>
+
+                <!-- Expiry Date -->
+                <div class="field">
+
+                    <label for="expiryDate">Expiry Date</label>
+
+                    <input
+                            id="expiryDate"
+                            type="text"
+                            th:field="*{expiryDate}">
+
+                    <small>Select the license expiration date.</small>
+
+                </div>
+
+            </div>
+
+            <div class="note">
+
+                <h3>Note</h3>
+
+                <p>
+
+                    Each tool can have one associated license record.
+                    This information is stored separately using a
+                    <strong>One-to-One</strong> relationship with the Tool entity.
+
+                </p>
+
+            </div>
+
+            <div class="actions">
+
+                <a href="/home/tools" class="btn cancel">
+
+                    Cancel
+
+                </a>
+
+                <button type="submit" class="btn save">
+
+                    Save License
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
