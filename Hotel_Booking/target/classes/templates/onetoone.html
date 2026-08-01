@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Stay | Room Booking</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{ margin:0; padding:0; box-sizing:border-box; }
+
+        body{
+
+            font-family:'Inter',sans-serif;
+            background:#faf6ee;
+            color:#1f2a24;
+
+        }
+
+        h1,h2,h3{ font-family:'Fraunces',serif; }
+
+        :root{
+
+            --ink:#1f2a24;
+            --emerald:#1b4332;
+            --emerald-light:#2d6a4f;
+
+            --coral:#e0673f;
+            --coral-dark:#c8532e;
+
+            --bg:#faf6ee;
+            --surface:#ffffff;
+
+            --muted:#7c8a80;
+            --border:#e9e1d1;
+
+            --shadow:0 22px 50px rgba(27,67,50,.14);
+
+        }
+
+        /* ============= TOP NAV ============= */
+
+        .topnav{
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+            padding:24px 56px;
+
+            background:var(--surface);
+            border-bottom:1px solid var(--border);
+
+        }
+
+        .topnav .logo{
+
+            font-family:'Fraunces',serif;
+            font-size:22px;
+            font-weight:700;
+            color:var(--emerald);
+
+        }
+
+        .topnav .logo span{ color:var(--coral); }
+
+        .topnav nav{ display:flex; gap:38px; }
+
+        .topnav nav a{
+
+            text-decoration:none;
+            color:var(--muted);
+            font-weight:600;
+            font-size:14px;
+
+            padding-bottom:6px;
+            border-bottom:2px solid transparent;
+
+            transition:.2s ease;
+
+        }
+
+        .topnav nav a:hover{ color:var(--ink); }
+
+        .topnav nav a.active{
+
+            color:var(--emerald);
+            border-bottom-color:var(--coral);
+
+        }
+
+        .topnav .cta{
+
+            text-decoration:none;
+            background:var(--coral);
+            color:white;
+
+            padding:11px 22px;
+            border-radius:10px;
+
+            font-weight:700;
+            font-size:14px;
+
+            transition:.2s ease;
+
+        }
+
+        .topnav .cta:hover{ background:var(--coral-dark); }
+
+        /* ============= PAGE ============= */
+
+        .page{
+
+            max-width:920px;
+            margin:0 auto;
+            padding:56px 32px 70px;
+
+        }
+
+        .page-header{
+
+            margin-bottom:36px;
+            text-align:center;
+
+        }
+
+        .page-header .eyebrow{
+
+            color:var(--coral-dark);
+            font-weight:700;
+            font-size:12.5px;
+            letter-spacing:.08em;
+            text-transform:uppercase;
+            margin-bottom:10px;
+
+        }
+
+        .page-header h1{ font-size:32px; margin-bottom:8px; }
+
+        .page-header p{ color:var(--muted); font-size:15px; }
+
+        /* ============= TICKET ============= */
+
+        .ticket{
+
+            background:var(--surface);
+            border-radius:24px;
+            box-shadow:var(--shadow);
+            overflow:hidden;
+
+            display:grid;
+            grid-template-columns:1fr 2px 250px;
+
+            position:relative;
+
+        }
+
+        .ticket-main{ padding:38px; }
+
+        .ticket-main .kicker{
+
+            font-size:12px;
+            font-weight:700;
+            letter-spacing:.08em;
+            text-transform:uppercase;
+            color:var(--muted);
+            margin-bottom:22px;
+
+        }
+
+        .ticket-divider{
+
+            position:relative;
+            border-left:2px dashed var(--border);
+
+        }
+
+        .notch{
+
+            position:absolute;
+            left:-14px;
+            width:28px;
+            height:28px;
+            border-radius:50%;
+            background:var(--bg);
+
+        }
+
+        .notch.top{ top:-14px; }
+
+        .notch.bottom{ bottom:-14px; }
+
+        .ticket-stub{
+
+            background:var(--emerald);
+            color:#f3efe4;
+
+            padding:34px 30px;
+
+            display:flex;
+            flex-direction:column;
+            justify-content:space-between;
+
+        }
+
+        .ticket-stub .kicker{
+
+            font-size:12px;
+            font-weight:700;
+            letter-spacing:.08em;
+            text-transform:uppercase;
+            color:rgba(243,239,228,.6);
+            margin-bottom:18px;
+
+        }
+
+        .ticket-stub .field label{ color:rgba(243,239,228,.85); }
+
+        .ticket-stub .field select{
+
+            background:rgba(255,255,255,.08);
+            border-color:rgba(255,255,255,.25);
+            color:#fff;
+
+        }
+
+        .ticket-stub .field select option{ color:var(--ink); }
+
+        .ticket-stub small{
+
+            color:rgba(243,239,228,.55) !important;
+
+        }
+
+        /* ============= GRID / FIELDS ============= */
+
+        .form-grid{
+
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:20px;
+
+        }
+
+        .full{ grid-column:1/-1; }
+
+        .field{ display:flex; flex-direction:column; }
+
+        .field label{
+
+            font-size:13px;
+            font-weight:700;
+            margin-bottom:8px;
+            color:var(--emerald);
+
+        }
+
+        .field input,
+        .field select{
+
+            width:100%;
+            padding:13px 15px;
+
+            border:1.5px solid var(--border);
+            border-radius:12px;
+
+            font-size:14.5px;
+            font-family:inherit;
+            color:var(--ink);
+
+            background:#fdfbf6;
+            outline:none;
+
+            transition:.2s ease;
+
+        }
+
+        .field input:focus,
+        .field select:focus{
+
+            border-color:var(--coral);
+            background:white;
+            box-shadow:0 0 0 4px rgba(224,103,63,.14);
+
+        }
+
+        .field small{
+
+            margin-top:6px;
+            color:var(--muted);
+            font-size:12px;
+
+        }
+
+        /* ============= NOTE + BUTTONS (inside stub) ============= */
+
+        .stub-note{
+
+            font-size:12.5px;
+            line-height:1.6;
+            color:rgba(243,239,228,.72);
+            margin-top:18px;
+
+        }
+
+        .stub-note strong{ color:#fff; }
+
+        .actions{
+
+            margin-top:22px;
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+
+        }
+
+        .btn{
+
+            padding:13px 20px;
+            border:none;
+            border-radius:12px;
+            cursor:pointer;
+            text-decoration:none;
+            font-weight:700;
+            font-size:14px;
+            text-align:center;
+            transition:.2s ease;
+
+        }
+
+        .save{ background:var(--coral); color:white; }
+
+        .save:hover{ background:var(--coral-dark); }
+
+        .cancel{
+
+            background:transparent;
+            color:rgba(243,239,228,.8);
+            border:1.5px solid rgba(243,239,228,.3);
+
+        }
+
+        .cancel:hover{ border-color:#fff; color:#fff; }
+
+        footer{
+
+            text-align:center;
+            padding:44px 0 10px;
+            color:var(--muted);
+            font-size:13px;
+
+        }
+
+        /* ============= RESPONSIVE ============= */
+
+        @media(max-width:800px){
+
+            .topnav{ flex-direction:column; gap:16px; padding:20px; }
+
+            .topnav nav{ flex-wrap:wrap; justify-content:center; gap:18px; }
+
+            .page{ padding:34px 16px 50px; }
+
+            .ticket{ grid-template-columns:1fr; }
+
+            .ticket-divider{
+
+                border-left:none;
+                border-top:2px dashed var(--border);
+                height:2px;
+
+            }
+
+            .notch{ top:-14px; left:20px; }
+
+            .notch.bottom{ bottom:auto; top:-14px; left:auto; right:20px; }
+
+            .ticket-main{ padding:28px; }
+
+            .form-grid{ grid-template-columns:1fr; }
+
+        }
+
+    </style>
+</head>
+<body>
+
+<nav class="topnav">
+
+    <div class="logo">Grand<span>Stay</span></div>
+
+    <nav>
+
+        <a href="/home/dashboard">Dashboard</a>
+
+        <a href="/home/guests">Guests</a>
+
+        <a href="/home/form">New Guest</a>
+
+        <a href="/home/booking" class="active">Room Booking</a>
+
+    </nav>
+
+    <a href="/home/form" class="cta">+ Register Guest</a>
+
+</nav>
+
+<div class="page">
+
+    <div class="page-header">
+
+        <div class="eyebrow">Room Booking</div>
+
+        <h1>Assign a Room</h1>
+
+        <p>Set the room, stay dates and payment status for a registered guest.</p>
+
+    </div>
+
+    <form th:action="@{/home/booking}"
+          method="post"
+          th:object="${booking}">
+
+        <div class="ticket">
+
+            <div class="ticket-main">
+
+                <div class="kicker">Stay Details</div>
+
+                <div class="form-grid">
+
+                    <div class="field">
+
+                        <label for="floor">Floor *</label>
+
+                        <select id="floor" th:field="*{floor}">
+
+                            <option value="">Select Floor</option>
+                            <option value="Ground Floor">Ground Floor</option>
+                            <option value="1st Floor">1st Floor</option>
+                            <option value="2nd Floor">2nd Floor</option>
+                            <option value="3rd Floor">3rd Floor</option>
+                            <option value="4th Floor">4th Floor</option>
+
+                        </select>
+
+                        <small>Select the floor of the booked room.</small>
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="roomNumber">Room Number *</label>
+
+                        <input
+                                id="roomNumber"
+                                type="text"
+                                placeholder="204"
+                                th:field="*{roomNumber}">
+
+                        <small>Room number assigned to the guest.</small>
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="checkIn">Check-In Date *</label>
+
+                        <input
+                                id="checkIn"
+                                type="date"
+                                th:field="*{checkIn}">
+
+                        <small>Guest's arrival date.</small>
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="checkOut">Check-Out Date *</label>
+
+                        <input
+                                id="checkOut"
+                                type="date"
+                                th:field="*{checkOut}">
+
+                        <small>Guest's departure date. Nights are calculated automatically.</small>
+
+                    </div>
+
+                    <div class="field full">
+
+                        <label for="amount">Amount *</label>
+
+                        <input
+                                id="amount"
+                                type="number"
+                                step="0.01"
+                                placeholder="150.00"
+                                th:field="*{amount}">
+
+                        <small>Total booking amount for the stay.</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="ticket-divider">
+
+                <div class="notch top"></div>
+                <div class="notch bottom"></div>
+
+            </div>
+
+            <div class="ticket-stub">
+
+                <div>
+
+                    <div class="kicker">Payment</div>
+
+                    <div class="field">
+
+                        <label for="paymentStatus">Status *</label>
+
+                        <select id="paymentStatus" th:field="*{paymentStatus}">
+
+                            <option value="">Select Status</option>
+                            <option value="Paid">Paid</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Partial">Partial</option>
+                            <option value="Refunded">Refunded</option>
+
+                        </select>
+
+                    </div>
+
+                    <p class="stub-note">
+
+                        Each guest can have <strong>one</strong> associated booking,
+                        stored via a One-to-One relationship with the Guest entity.
+
+                    </p>
+
+                </div>
+
+                <div class="actions">
+
+                    <button type="submit" class="btn save">Save Booking</button>
+
+                    <a href="/home/guests" class="btn cancel">Cancel</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+    <footer>Grand Stay Hotel Booking • Spring Boot CRUD Project</footer>
+
+</div>
+
+</body>
+</html>

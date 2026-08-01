@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Stay | Front Desk</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{ margin:0; padding:0; box-sizing:border-box; }
+
+        :root{
+
+            --ink:#1f2a24;
+            --emerald:#1b4332;
+            --emerald-light:#2d6a4f;
+
+            --coral:#e0673f;
+            --coral-dark:#c8532e;
+
+            --gold:#d7a13b;
+
+            --bg:#faf6ee;
+            --surface:#ffffff;
+
+            --muted:#7c8a80;
+            --border:#e9e1d1;
+
+            --shadow:0 18px 40px rgba(27,67,50,.10);
+
+        }
+
+        body{
+
+            font-family:'Inter',sans-serif;
+            background:var(--bg);
+            color:var(--ink);
+
+        }
+
+        h1,h2,h3{ font-family:'Fraunces',serif; }
+
+        /* ============= TOP NAV ============= */
+
+        .topnav{
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+            padding:24px 56px;
+
+            background:var(--surface);
+            border-bottom:1px solid var(--border);
+
+        }
+
+        .topnav .logo{
+
+            font-family:'Fraunces',serif;
+            font-size:22px;
+            font-weight:700;
+            color:var(--emerald);
+
+        }
+
+        .topnav .logo span{ color:var(--coral); }
+
+        .topnav nav{
+
+            display:flex;
+            gap:38px;
+
+        }
+
+        .topnav nav a{
+
+            text-decoration:none;
+            color:var(--muted);
+            font-weight:600;
+            font-size:14px;
+
+            padding-bottom:6px;
+            border-bottom:2px solid transparent;
+
+            transition:.2s ease;
+
+        }
+
+        .topnav nav a:hover{ color:var(--ink); }
+
+        .topnav nav a.active{
+
+            color:var(--emerald);
+            border-bottom-color:var(--coral);
+
+        }
+
+        .topnav .cta{
+
+            text-decoration:none;
+            background:var(--coral);
+            color:white;
+
+            padding:11px 22px;
+            border-radius:10px;
+
+            font-weight:700;
+            font-size:14px;
+
+            transition:.2s ease;
+
+        }
+
+        .topnav .cta:hover{ background:var(--coral-dark); }
+
+        /* ============= PAGE ============= */
+
+        .page{
+
+            max-width:1180px;
+            margin:0 auto;
+            padding:48px 32px 70px;
+
+        }
+
+        .page-header{
+
+            margin-bottom:30px;
+
+        }
+
+        .page-header .eyebrow{
+
+            color:var(--coral-dark);
+            font-weight:700;
+            font-size:12.5px;
+            letter-spacing:.08em;
+            text-transform:uppercase;
+            margin-bottom:10px;
+
+        }
+
+        .page-header h1{
+
+            font-size:38px;
+            margin-bottom:8px;
+
+        }
+
+        .page-header p{
+
+            color:var(--muted);
+            font-size:15px;
+
+        }
+
+        /* ============= ACTION ROW ============= */
+
+        .action-row{
+
+            display:flex;
+            gap:12px;
+            flex-wrap:wrap;
+            margin-bottom:34px;
+
+        }
+
+        .action-pill{
+
+            display:flex;
+            align-items:center;
+            gap:9px;
+
+            background:var(--surface);
+            border:1.5px solid var(--border);
+
+            padding:12px 20px;
+            border-radius:30px;
+
+            text-decoration:none;
+            color:var(--ink);
+            font-weight:600;
+            font-size:13.5px;
+
+            transition:.2s ease;
+
+        }
+
+        .action-pill:hover{
+
+            border-color:var(--coral);
+            color:var(--coral-dark);
+            transform:translateY(-2px);
+
+        }
+
+        /* ============= BENTO GRID ============= */
+
+        .bento{
+
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            grid-template-rows:repeat(2,150px);
+            grid-template-areas:
+                "occ occ arr dep"
+                "occ occ total total";
+            gap:18px;
+
+            margin-bottom:40px;
+
+        }
+
+        .tile{
+
+            border-radius:20px;
+            padding:26px;
+
+            display:flex;
+            flex-direction:column;
+            justify-content:space-between;
+
+        }
+
+        .tile-occ{
+
+            grid-area:occ;
+            background:var(--emerald);
+            color:#f3efe4;
+
+        }
+
+        .tile-occ .top-row{
+
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+
+        }
+
+        .tile-occ .top-row span{
+
+            font-size:12.5px;
+            font-weight:700;
+            text-transform:uppercase;
+            letter-spacing:.06em;
+            color:rgba(243,239,228,.6);
+
+        }
+
+        .tile-occ h2{
+
+            font-size:44px;
+            margin:6px 0 4px;
+
+        }
+
+        .tile-occ p{
+
+            color:rgba(243,239,228,.68);
+            font-size:13.5px;
+            margin-bottom:16px;
+
+        }
+
+        .occ-bar{
+
+            width:100%;
+            height:10px;
+            border-radius:10px;
+            background:rgba(243,239,228,.18);
+            overflow:hidden;
+
+        }
+
+        .occ-bar-fill{
+
+            width:75%;
+            height:100%;
+            background:var(--coral);
+            border-radius:10px;
+
+        }
+
+        .tile-light{
+
+            background:var(--surface);
+            box-shadow:var(--shadow);
+
+        }
+
+        .tile-arr{ grid-area:arr; border-top:4px solid var(--coral); }
+
+        .tile-dep{ grid-area:dep; border-top:4px solid var(--gold); }
+
+        .tile-total{
+
+            grid-area:total;
+            border-top:4px solid var(--emerald-light);
+
+            flex-direction:row;
+            align-items:center;
+            justify-content:space-between;
+
+        }
+
+        .tile-light .label{
+
+            font-size:12.5px;
+            font-weight:700;
+            text-transform:uppercase;
+            letter-spacing:.05em;
+            color:var(--muted);
+
+        }
+
+        .tile-light h2{
+
+            font-size:34px;
+            margin-top:6px;
+
+        }
+
+        .tile-total .icon{
+
+            width:54px;
+            height:54px;
+            border-radius:14px;
+            background:#f3efe4;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:24px;
+
+        }
+
+        /* ============= TIMELINE ============= */
+
+        .section-title{
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:22px;
+
+        }
+
+        .section-title h3{ font-size:21px; }
+
+        .section-title .count{
+
+            background:#f3efe4;
+            color:var(--emerald);
+            font-size:12.5px;
+            font-weight:700;
+            padding:6px 14px;
+            border-radius:20px;
+
+        }
+
+        .timeline{
+
+            position:relative;
+            padding-left:30px;
+
+        }
+
+        .timeline::before{
+
+            content:"";
+            position:absolute;
+            left:9px;
+            top:6px;
+            bottom:6px;
+            width:2px;
+            background:var(--border);
+
+        }
+
+        .t-item{
+
+            position:relative;
+            margin-bottom:16px;
+
+        }
+
+        .t-dot{
+
+            position:absolute;
+            left:-30px;
+            top:14px;
+
+            width:16px;
+            height:16px;
+            border-radius:50%;
+
+            background:var(--surface);
+            border:3px solid var(--coral);
+
+        }
+
+        .t-item.out .t-dot{ border-color:var(--emerald-light); }
+
+        .t-card{
+
+            background:var(--surface);
+            border-radius:16px;
+            padding:18px 22px;
+            box-shadow:var(--shadow);
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+        }
+
+        .t-who{ font-weight:700; }
+
+        .t-room{
+
+            display:block;
+            margin-top:2px;
+            color:var(--muted);
+            font-size:12.5px;
+
+        }
+
+        .t-tag{
+
+            font-size:12px;
+            font-weight:700;
+            padding:6px 14px;
+            border-radius:20px;
+
+        }
+
+        .t-item .t-tag{ background:#fdece4; color:var(--coral-dark); }
+
+        .t-item.out .t-tag{ background:#eaf2ea; color:var(--emerald-light); }
+
+        footer{
+
+            text-align:center;
+            color:var(--muted);
+            font-size:13px;
+            padding:44px 0 10px;
+
+        }
+
+        /* ============= RESPONSIVE ============= */
+
+        @media(max-width:900px){
+
+            .topnav{ flex-direction:column; gap:16px; padding:20px; }
+
+            .topnav nav{ flex-wrap:wrap; justify-content:center; gap:18px; }
+
+            .page{ padding:34px 20px 50px; }
+
+            .bento{
+
+                grid-template-columns:1fr 1fr;
+                grid-template-rows:repeat(3,140px);
+                grid-template-areas:
+                    "occ occ"
+                    "arr dep"
+                    "total total";
+
+            }
+
+        }
+
+        @media(max-width:560px){
+
+            .bento{
+
+                grid-template-columns:1fr;
+                grid-template-rows:repeat(4,auto);
+                grid-template-areas:
+                    "occ"
+                    "arr"
+                    "dep"
+                    "total";
+
+            }
+
+            .tile{ min-height:120px; }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<nav class="topnav">
+
+    <div class="logo">Grand<span>Stay</span></div>
+
+    <nav>
+
+        <a href="/home/dashboard" class="active">Dashboard</a>
+
+        <a href="/home/guests">Guests</a>
+
+        <a href="/home/form">New Guest</a>
+
+        <a href="/home/booking">Room Booking</a>
+
+    </nav>
+
+    <a href="/home/form" class="cta">+ Register Guest</a>
+
+</nav>
+
+<div class="page">
+
+    <div class="page-header">
+
+        <div class="eyebrow">Front Desk</div>
+
+        <h1>Good Morning, Team</h1>
+
+        <p>Here's how the property looks today.</p>
+
+    </div>
+
+    <div class="action-row">
+
+        <a href="/home/form" class="action-pill">➕ Register a Guest</a>
+
+        <a href="/home/booking" class="action-pill">🗝 Create a Room Booking</a>
+
+        <a href="/home/guests" class="action-pill">📋 View Full Guest List</a>
+
+        <a href="/home/guests" class="action-pill">💳 Check Pending Payments</a>
+
+    </div>
+
+    <section class="bento">
+
+        <div class="tile tile-occ">
+
+            <div class="top-row">
+
+                <span>Occupancy</span>
+
+            </div>
+
+            <div>
+
+                <h2>18 / 24</h2>
+                <p>Rooms currently occupied</p>
+
+                <div class="occ-bar"><div class="occ-bar-fill"></div></div>
+
+            </div>
+
+        </div>
+
+        <div class="tile tile-light tile-arr">
+
+            <div class="label">Arrivals Today</div>
+
+            <h2>6</h2>
+
+        </div>
+
+        <div class="tile tile-light tile-dep">
+
+            <div class="label">Departures Today</div>
+
+            <h2>4</h2>
+
+        </div>
+
+        <div class="tile tile-light tile-total">
+
+            <div>
+
+                <div class="label">Total Registered Guests</div>
+
+                <h2 th:text="${count}">24</h2>
+
+            </div>
+
+            <div class="icon">🧳</div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <div class="section-title">
+
+            <h3>Today's Front Desk Schedule</h3>
+
+            <span class="count">6 arriving · 4 departing</span>
+
+        </div>
+
+        <div class="timeline">
+
+            <div class="t-item">
+
+                <div class="t-dot"></div>
+
+                <div class="t-card">
+
+                    <div>
+
+                        <div class="t-who">Ayesha Rahman</div>
+                        <span class="t-room">Room 204 · 2nd Floor · 2:00 PM</span>
+
+                    </div>
+
+                    <span class="t-tag">Arrival</span>
+
+                </div>
+
+            </div>
+
+            <div class="t-item out">
+
+                <div class="t-dot"></div>
+
+                <div class="t-card">
+
+                    <div>
+
+                        <div class="t-who">David Fernandes</div>
+                        <span class="t-room">Room 118 · Ground Floor · 11:00 AM</span>
+
+                    </div>
+
+                    <span class="t-tag">Departure</span>
+
+                </div>
+
+            </div>
+
+            <div class="t-item">
+
+                <div class="t-dot"></div>
+
+                <div class="t-card">
+
+                    <div>
+
+                        <div class="t-who">Mei Ling Chen</div>
+                        <span class="t-room">Room 305 · 3rd Floor · 3:30 PM</span>
+
+                    </div>
+
+                    <span class="t-tag">Arrival</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>Grand Stay Hotel Booking • Spring Boot CRUD Project</footer>
+
+</div>
+
+</body>
+</html>
