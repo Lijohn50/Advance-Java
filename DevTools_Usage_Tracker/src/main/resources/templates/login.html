@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in — DevTrack</title>
+  <link rel="stylesheet" href="/login.css">
+</head>
+<body>
+
+<div class="auth-shell">
+
+  <div class="brand-tag">
+    <span class="dot"></span>
+   ADMIN
+  </div>
+
+  <div class="form-card">
+    <h1 class="form-title">Sign in</h1>
+    <p class="form-subtitle">Enter your credentials to manage tools, developers, and licenses.</p>
+
+    <form th:action="@{/login}" th:object="${loginRequest}" method="post" novalidate>
+
+      <div class="field-group">
+        <label class="field-label" for="email">EMAIL</label>
+        <input type="email" id="email" class="field-input"
+               th:field="*{email}" placeholder="you@company.com" autocomplete="username">
+        <div class="field-error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="password">PASSWORD</label>
+        <input type="password" id="password" class="field-input"
+               th:field="*{password}" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="current-password">
+        <div class="field-error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+      </div>
+
+      <button type="submit" class="submit-btn">Sign in</button>
+    </form>
+
+    <!-- Compact status strip: signature element tying back to the app's own dashboard -->
+    <div class="status-strip">
+      <div class="stat">
+        <span class="stat-value accent">18</span>
+        <span class="stat-label">Tools</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">42</span>
+        <span class="stat-label">Developers</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value ok">76%</span>
+        <span class="stat-label">Utilized</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value warn">3</span>
+        <span class="stat-label">Renewals</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="form-hint">Access is restricted to authorized administrators.</p>
+
+</div>
+
+</body>
+</html>
