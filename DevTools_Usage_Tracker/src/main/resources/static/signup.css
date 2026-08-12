@@ -1,0 +1,637 @@
+/* ==========================================================================
+   DevTrack — Design Tokens & Base System
+   Solid colors only. No gradients, anywhere, ever.
+   ========================================================================== */
+
+:root {
+  /* -- Brand palette (structural) -- */
+  --navy: #213448;      /* primary dark: nav, headers, primary text on light */
+  --teal: #034C53;      /* primary action: buttons, links, focus, "healthy" */
+  --steel: #547792;     /* secondary text, borders, icons, mid-tone UI */
+  --mist: #94B4C1;      /* backgrounds, disabled states, unfilled tracks */
+  --cream: #EAE0CF;     /* light surface, card background, warm neutral */
+
+  /* -- Functional accents (used sparingly, meaning only) -- */
+  --amber: #B9862F;     /* attention / renewing soon */
+  --rust: #A6432F;      /* danger / unused seats / delete */
+  --amber-tint: #F4E8D4;
+  --rust-tint: #F3E0DB;
+
+  /* -- Derived surfaces -- */
+  --navy-900: #182735;
+  --navy-700: #2C4157;
+  --teal-700: #023A40;
+  --teal-tint: #DDEBEA;
+  --cream-100: #F4EFE5;
+  --white: #FFFFFF;
+
+  /* -- Type -- */
+  --font-display: 'Space Grotesk', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+
+  /* -- Scale -- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --shadow-sm: 0 1px 2px rgba(19, 30, 41, 0.08);
+  --shadow-md: 0 4px 16px rgba(19, 30, 41, 0.12);
+  --shadow-lg: 0 12px 40px rgba(19, 30, 41, 0.22);
+}
+
+/* -- Reset -- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--navy);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+button { font-family: inherit; }
+a { color: inherit; }
+
+/* -- Focus visibility (accessibility floor) -- */
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
+/* -- Card -- */
+.card {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* -- Form field -- */
+.field { margin-bottom: 20px; }
+
+.field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.field .input-wrap {
+  position: relative;
+}
+
+.field input {
+  width: 100%;
+  padding: 13px 14px;
+  font-size: 15px;
+  font-family: var(--font-body);
+  color: var(--navy);
+  background: var(--white);
+  border: 1.5px solid var(--mist);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field input::placeholder { color: var(--steel); opacity: 0.65; }
+
+.field input:hover { border-color: var(--steel); }
+
+.field input:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px var(--teal-tint);
+}
+
+.field input.has-error {
+  border-color: var(--rust);
+}
+.field input.has-error:focus {
+  box-shadow: 0 0 0 3px var(--rust-tint);
+}
+
+/* password visibility toggle */
+.toggle-visibility {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--steel);
+  border-radius: var(--radius-sm);
+}
+.toggle-visibility:hover { color: var(--teal); }
+.toggle-visibility svg { width: 18px; height: 18px; }
+
+/* -- Buttons -- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 13px 20px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.btn-primary {
+  background: var(--teal);
+  color: var(--cream);
+}
+.btn-primary:hover { background: var(--teal-700); }
+.btn-primary:active { transform: translateY(1px); }
+
+.btn-primary:disabled {
+  background: var(--mist);
+  color: var(--white);
+  cursor: not-allowed;
+}
+
+/* -- Alert / error banner -- */
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.alert-error {
+  background: var(--rust-tint);
+  color: var(--rust);
+  border: 1px solid rgba(166, 67, 47, 0.25);
+}
+
+.alert svg { flex-shrink: 0; width: 17px; height: 17px; margin-top: 1px; }
+
+/* -- Seat grid mark (brand signature) -- */
+.seat-mark {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  width: 30px;
+}
+.seat-mark span {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   App Shell — sidebar + topbar layout used on every authenticated page
+   ========================================================================== */
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+  background: var(--cream-100);
+}
+
+/* -- Sidebar -- */
+.sidebar {
+  background: var(--navy);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 10px 28px;
+}
+
+.sidebar-brand .brand-name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--cream);
+}
+
+.nav-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--steel);
+  padding: 16px 12px 8px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--mist);
+  font-size: 14.5px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  position: relative;
+}
+
+.nav-item svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.nav-item:hover {
+  background: var(--navy-700);
+  color: var(--cream);
+}
+
+.nav-item.active {
+  background: var(--teal);
+  color: var(--cream);
+}
+.nav-item.active svg { opacity: 1; }
+
+.nav-item.active::before {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 20px;
+  background: var(--amber);
+  border-radius: 0 3px 3px 0;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 14px 12px;
+  border-top: 1px solid var(--navy-700);
+}
+
+.sidebar-tag {
+  font-size: 11px;
+  color: var(--steel);
+  letter-spacing: 0.03em;
+}
+
+/* -- Topbar -- */
+.topbar {
+  height: 72px;
+  background: var(--white);
+  border-bottom: 1px solid rgba(84, 119, 146, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--steel);
+}
+
+.breadcrumb .current {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.avatar-chip {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.user-menu-trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 8px 6px 6px;
+  border-radius: var(--radius-sm);
+}
+.user-menu-trigger:hover { background: var(--cream-100); }
+
+.user-meta { text-align: left; }
+.user-meta .name { font-size: 13.5px; font-weight: 600; color: var(--navy); line-height: 1.3; }
+.user-meta .role { font-size: 11.5px; color: var(--steel); }
+
+.user-menu-trigger .chevron { width: 14px; height: 14px; color: var(--steel); }
+
+.user-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(84, 119, 146, 0.15);
+  min-width: 180px;
+  padding: 6px;
+  display: none;
+  z-index: 20;
+}
+.user-dropdown.open { display: block; }
+
+.user-dropdown a,
+.user-dropdown button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 10px;
+  font-size: 13.5px;
+  color: var(--navy);
+  background: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-align: left;
+  text-decoration: none;
+  font-family: var(--font-body);
+}
+.user-dropdown a:hover,
+.user-dropdown button:hover { background: var(--cream-100); }
+.user-dropdown svg { width: 16px; height: 16px; color: var(--steel); }
+.user-dropdown .signout { color: var(--rust); }
+.user-dropdown .signout svg { color: var(--rust); }
+
+/* -- Main content area -- */
+.main-content {
+  padding: 32px;
+  max-width: 1100px;
+}
+
+.page-header {
+  margin-bottom: 28px;
+}
+
+.page-header .back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--steel);
+  text-decoration: none;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.page-header .back-link:hover { color: var(--teal); }
+.page-header .back-link svg { width: 14px; height: 14px; }
+
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0 0 6px;
+}
+
+.page-header .page-subtitle {
+  font-size: 14px;
+  color: var(--steel);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Form shell — sectioned, rich content forms (e.g. Developer / Tool forms)
+   ========================================================================== */
+
+.form-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.form-identity {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 28px 32px;
+  background: var(--teal-tint);
+  border-bottom: 1px solid rgba(3, 76, 83, 0.12);
+}
+
+.identity-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+}
+
+.identity-text .identity-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0 0 3px;
+}
+.identity-text .identity-hint {
+  font-size: 13px;
+  color: var(--steel);
+  margin: 0;
+}
+
+.form-section {
+  padding: 28px 32px;
+  border-bottom: 1px solid rgba(84, 119, 146, 0.15);
+}
+.form-section:last-of-type { border-bottom: none; }
+
+.section-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin: 0 0 20px;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 24px;
+}
+
+.field-grid .field-full { grid-column: 1 / -1; }
+
+.field .hint {
+  font-size: 12.5px;
+  color: var(--steel);
+  margin: 6px 0 0;
+  line-height: 1.4;
+}
+
+/* -- Select -- */
+.field select {
+  width: 100%;
+  padding: 13px 40px 13px 14px;
+  font-size: 15px;
+  font-family: var(--font-body);
+  color: var(--navy);
+  background: var(--white);
+  border: 1.5px solid var(--mist);
+  border-radius: var(--radius-sm);
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23547792'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px;
+}
+.field select:hover { border-color: var(--steel); }
+.field select:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px var(--teal-tint);
+}
+
+/* -- Input with leading icon -- */
+.field .input-wrap.has-icon input {
+  padding-left: 42px;
+}
+.field .input-wrap .field-icon {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 17px;
+  height: 17px;
+  color: var(--steel);
+  pointer-events: none;
+}
+
+/* -- Form actions -- */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 22px 32px;
+  background: var(--cream-100);
+}
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--navy);
+  border: 1.5px solid var(--mist);
+  width: auto;
+  padding: 12px 22px;
+}
+.btn-secondary:hover { border-color: var(--steel); background: var(--cream-100); }
+
+.form-actions .btn { width: auto; padding: 12px 26px; }
+
+/* ==========================================================================
+   Badge — small status/context tag (e.g. "one-time setup")
+   ========================================================================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.badge-amber {
+  background: var(--amber-tint);
+  color: var(--amber);
+}
+
+.badge svg { width: 13px; height: 13px; }
+
+/* -- Password requirements checklist -- */
+.pw-requirements {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+}
+
+.pw-requirements li {
+  font-size: 12.5px;
+  color: var(--steel);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.15s ease;
+}
+
+.pw-requirements li svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+.pw-requirements li.met {
+  color: var(--teal);
+}
+

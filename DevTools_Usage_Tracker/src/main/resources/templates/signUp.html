@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set up your admin account — DevTrack</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/signup.css">
+
+  <style>
+    body {
+      background: var(--navy);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .setup-shell {
+      width: 100%;
+      max-width: 440px;
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--cream);
+      letter-spacing: -0.01em;
+    }
+
+    .setup-card { padding: 40px 36px 36px; }
+
+    .setup-card .badge { margin-bottom: 16px; }
+
+    .setup-card h1 {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0 0 6px;
+      color: var(--navy);
+    }
+
+    .setup-card .subtitle {
+      font-size: 14px;
+      color: var(--steel);
+      margin: 0 0 28px;
+      line-height: 1.5;
+    }
+
+    .setup-footer {
+      text-align: center;
+      margin-top: 22px;
+      font-size: 13px;
+      color: var(--mist);
+      line-height: 1.6;
+    }
+
+    #mismatch-warning { display: none; }
+  </style>
+</head>
+<body>
+
+  <div class="setup-shell">
+
+    <div class="brand-row">
+      <span class="seat-mark" aria-hidden="true">
+        <span style="background: var(--teal);"></span>
+        <span style="background: var(--teal);"></span>
+        <span style="background: var(--mist);"></span>
+        <span style="background: var(--teal);"></span>
+        <span style="background: var(--mist);"></span>
+        <span style="background: var(--mist);"></span>
+      </span>
+      <span class="brand-name">DevTrack</span>
+    </div>
+
+    <div class="card setup-card">
+
+      <span class="badge badge-amber">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-11.25a.75.75 0 00-1.5 0v4c0 .199.079.39.22.53l2.5 2.5a.75.75 0 101.06-1.06l-2.28-2.28V6.75z" clip-rule="evenodd"/></svg>
+        First-run setup &mdash; one time only
+      </span>
+
+      <h1>Create your admin account</h1>
+      <p class="subtitle">No admin exists yet. Set one up now &mdash; this page locks itself the moment your account is created.</p>
+
+      <!--
+        Optional server-side alert if setup was already completed, e.g.:
+        <div class="alert alert-error" th:if="${param.alreadySetup}">
+      -->
+
+      <form method="post" id="setupForm" novalidate>
+
+        <div class="field">
+          <label for="fullName">Full name</label>
+          <div class="input-wrap">
+            <input type="text" id="fullName" name="fullName"
+                   placeholder="e.g. Alex Doran" required autofocus>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <div class="input-wrap">
+            <input type="email" id="email" name="email"
+                   placeholder="you@company.com" autocomplete="username" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <input type="password" id="password" name="password"
+                   placeholder="Create a password" autocomplete="new-password" required minlength="8">
+            <button type="button" class="toggle-visibility" aria-label="Show password" data-target="password">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 3.5c-4.14 0-7.5 3.5-8.5 6.5 1 3 4.36 6.5 8.5 6.5s7.5-3.5 8.5-6.5c-1-3-4.36-6.5-8.5-6.5zm0 10.75a4.25 4.25 0 110-8.5 4.25 4.25 0 010 8.5z"/><circle cx="10" cy="10" r="2.25"/></svg>
+            </button>
+          </div>
+          <ul class="pw-requirements" id="pwRequirements">
+            <li data-rule="length">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0l-3.5-3.5a1 1 0 111.4-1.4L8.5 12l6.8-6.8a1 1 0 011.4.1z" clip-rule="evenodd"/></svg>
+              8+ characters
+            </li>
+            <li data-rule="number">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0l-3.5-3.5a1 1 0 111.4-1.4L8.5 12l6.8-6.8a1 1 0 011.4.1z" clip-rule="evenodd"/></svg>
+              One number
+            </li>
+            <li data-rule="case">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0l-3.5-3.5a1 1 0 111.4-1.4L8.5 12l6.8-6.8a1 1 0 011.4.1z" clip-rule="evenodd"/></svg>
+              Upper &amp; lowercase
+            </li>
+          </ul>
+        </div>
+        <div class="alert alert-error" id="mismatch-warning">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.5 6.5a.75.75 0 011.5 0v4a.75.75 0 01-1.5 0v-4zM10 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+          <span>Passwords don't match. Double-check both fields.</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create Admin Account</button>
+
+      </form>
+    </div>
+
+    <p class="setup-footer">This is a one-time step. Once your account exists,<br>everyone will be sent to the sign-in page instead.</p>
+
+  </div>
+</body>
+<script src="/app.js"></script>
+</html>
