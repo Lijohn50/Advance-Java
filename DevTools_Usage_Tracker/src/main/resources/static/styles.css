@@ -1,0 +1,197 @@
+/* ==========================================================================
+   DevTrack — Design Tokens & Base System
+   Solid colors only. No gradients, anywhere, ever.
+   ========================================================================== */
+
+:root {
+  /* -- Brand palette (structural) -- */
+  --navy: #213448;      /* primary dark: nav, headers, primary text on light */
+  --teal: #034C53;      /* primary action: buttons, links, focus, "healthy" */
+  --steel: #547792;     /* secondary text, borders, icons, mid-tone UI */
+  --mist: #94B4C1;      /* backgrounds, disabled states, unfilled tracks */
+  --cream: #EAE0CF;     /* light surface, card background, warm neutral */
+
+  /* -- Functional accents (used sparingly, meaning only) -- */
+  --amber: #B9862F;     /* attention / renewing soon */
+  --rust: #A6432F;      /* danger / unused seats / delete */
+  --amber-tint: #F4E8D4;
+  --rust-tint: #F3E0DB;
+
+  /* -- Derived surfaces -- */
+  --navy-900: #182735;
+  --navy-700: #2C4157;
+  --teal-700: #023A40;
+  --teal-tint: #DDEBEA;
+  --cream-100: #F4EFE5;
+  --white: #FFFFFF;
+
+  /* -- Type -- */
+  --font-display: 'Space Grotesk', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+
+  /* -- Scale -- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --shadow-sm: 0 1px 2px rgba(19, 30, 41, 0.08);
+  --shadow-md: 0 4px 16px rgba(19, 30, 41, 0.12);
+  --shadow-lg: 0 12px 40px rgba(19, 30, 41, 0.22);
+}
+
+/* -- Reset -- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--navy);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+button { font-family: inherit; }
+a { color: inherit; }
+
+/* -- Focus visibility (accessibility floor) -- */
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
+/* -- Card -- */
+.card {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* -- Form field -- */
+.field { margin-bottom: 20px; }
+
+.field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.field .input-wrap {
+  position: relative;
+}
+
+.field input {
+  width: 100%;
+  padding: 13px 14px;
+  font-size: 15px;
+  font-family: var(--font-body);
+  color: var(--navy);
+  background: var(--white);
+  border: 1.5px solid var(--mist);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field input::placeholder { color: var(--steel); opacity: 0.65; }
+
+.field input:hover { border-color: var(--steel); }
+
+.field input:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px var(--teal-tint);
+}
+
+.field input.has-error {
+  border-color: var(--rust);
+}
+.field input.has-error:focus {
+  box-shadow: 0 0 0 3px var(--rust-tint);
+}
+
+/* password visibility toggle */
+.toggle-visibility {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--steel);
+  border-radius: var(--radius-sm);
+}
+.toggle-visibility:hover { color: var(--teal); }
+.toggle-visibility svg { width: 18px; height: 18px; }
+
+/* -- Buttons -- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 13px 20px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.btn-primary {
+  background: var(--teal);
+  color: var(--cream);
+}
+.btn-primary:hover { background: var(--teal-700); }
+.btn-primary:active { transform: translateY(1px); }
+
+.btn-primary:disabled {
+  background: var(--mist);
+  color: var(--white);
+  cursor: not-allowed;
+}
+
+/* -- Alert / error banner -- */
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.alert-error {
+  background: var(--rust-tint);
+  color: var(--rust);
+  border: 1px solid rgba(166, 67, 47, 0.25);
+}
+
+.alert svg { flex-shrink: 0; width: 17px; height: 17px; margin-top: 1px; }
+
+/* -- Seat grid mark (brand signature) -- */
+.seat-mark {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  width: 30px;
+}
+.seat-mark span {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}

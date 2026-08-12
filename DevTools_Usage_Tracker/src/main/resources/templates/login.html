@@ -4,64 +4,160 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign in — DevTrack</title>
-  <link rel="stylesheet" href="/login.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <style>
+    body {
+      background: var(--navy);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .login-shell {
+      width: 100%;
+      max-width: 408px;
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--cream);
+      letter-spacing: -0.01em;
+    }
+
+    .login-card {
+      padding: 40px 36px 36px;
+    }
+
+    .login-card h1 {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0 0 6px;
+      color: var(--navy);
+    }
+
+    .login-card .subtitle {
+      font-size: 14px;
+      color: var(--steel);
+      margin: 0 0 28px;
+      line-height: 1.5;
+    }
+
+    .login-footer {
+      text-align: center;
+      margin-top: 22px;
+      font-size: 13px;
+      color: var(--mist);
+    }
+
+    /* Error banner hidden by default — wire with th:if="${param.error}" */
+    #login-error { display: none; }
+  </style>
 </head>
 <body>
 
-<div class="auth-shell">
+  <div class="login-shell">
 
-  <div class="brand-tag">
-    <span class="dot"></span>
-   ADMIN
-  </div>
-
-  <div class="form-card">
-    <h1 class="form-title">Sign in</h1>
-    <p class="form-subtitle">Enter your credentials to manage tools, developers, and licenses.</p>
-
-    <form th:action="@{/login}" th:object="${loginRequest}" method="post" novalidate>
-
-      <div class="field-group">
-        <label class="field-label" for="email">EMAIL</label>
-        <input type="email" id="email" class="field-input"
-               th:field="*{email}" placeholder="you@company.com" autocomplete="username">
-        <div class="field-error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
-      </div>
-
-      <div class="field-group">
-        <label class="field-label" for="password">PASSWORD</label>
-        <input type="password" id="password" class="field-input"
-               th:field="*{password}" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="current-password">
-        <div class="field-error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
-      </div>
-
-      <button type="submit" class="submit-btn">Sign in</button>
-    </form>
-
-    <!-- Compact status strip: signature element tying back to the app's own dashboard -->
-    <div class="status-strip">
-      <div class="stat">
-        <span class="stat-value accent">18</span>
-        <span class="stat-label">Tools</span>
-      </div>
-      <div class="stat">
-        <span class="stat-value">42</span>
-        <span class="stat-label">Developers</span>
-      </div>
-      <div class="stat">
-        <span class="stat-value ok">76%</span>
-        <span class="stat-label">Utilized</span>
-      </div>
-      <div class="stat">
-        <span class="stat-value warn">3</span>
-        <span class="stat-label">Renewals</span>
-      </div>
+    <div class="brand-row">
+      <span class="seat-mark" aria-hidden="true">
+        <span style="background: var(--teal);"></span>
+        <span style="background: var(--teal);"></span>
+        <span style="background: var(--mist);"></span>
+        <span style="background: var(--teal);"></span>
+        <span style="background: var(--mist);"></span>
+        <span style="background: var(--mist);"></span>
+      </span>
+      <span class="brand-name">DevTrack</span>
     </div>
+
+    <div class="card login-card">
+      <h1>Welcome back</h1>
+      <p class="subtitle">Sign in to manage your team's tools and licenses.</p>
+
+      <!--
+        Error banner — server drives visibility, e.g.:
+        <div class="alert alert-error" th:if="${param.error}" id="login-error" style="display:flex">
+      -->
+      <div class="alert alert-error" id="login-error">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.5 6.5a.75.75 0 011.5 0v4a.75.75 0 01-1.5 0v-4zM10 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+        <span>Incorrect email or password. Try again.</span>
+      </div>
+
+      <form method="post" th:action="@{/login}" novalidate>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <div class="input-wrap">
+            <input
+              type="email"
+              id="email"
+              name="username"
+              placeholder="you@company.com"
+              autocomplete="username"
+              required
+              autofocus>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="••••••••"
+              autocomplete="current-password"
+              required>
+            <button type="button" class="toggle-visibility" aria-label="Show password" data-target="password">
+              <svg id="eye-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 3.5c-4.14 0-7.5 3.5-8.5 6.5 1 3 4.36 6.5 8.5 6.5s7.5-3.5 8.5-6.5c-1-3-4.36-6.5-8.5-6.5zm0 10.75a4.25 4.25 0 110-8.5 4.25 4.25 0 010 8.5z"/>
+                <circle cx="10" cy="10" r="2.25"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Sign in</button>
+
+      </form>
+    </div>
+
+    <p class="login-footer">DevTrack — internal tool &amp; license tracking</p>
+
   </div>
 
-  <p class="form-hint">Access is restricted to authorized administrators.</p>
+  <script>
+    const toggleBtn = document.querySelector('.toggle-visibility');
+    const pwField = document.getElementById('password');
 
-</div>
+    toggleBtn.addEventListener('click', () => {
+      const isHidden = pwField.type === 'password';
+      pwField.type = isHidden ? 'text' : 'password';
+      toggleBtn.setAttribute('aria-label', isHidden ? 'Hide password' : 'Show password');
+      toggleBtn.innerHTML = isHidden
+        ? '<svg viewBox="0 0 20 20" fill="currentColor"><path d="M3.28 2.22a.75.75 0 00-1.06 1.06l14.5 14.5a.75.75 0 101.06-1.06l-1.86-1.86c1.68-1.24 2.95-2.98 3.58-4.36-1-3-4.36-6.5-8.5-6.5-1.35 0-2.6.32-3.7.86L3.28 2.22zM10 6.25c.45 0 .89.06 1.3.17L9.02 8.7A2.25 2.25 0 0110 6.25zm-6.02 1.7C2.6 8.9 1.87 9.95 1.5 10.75c1 3 4.36 6.5 8.5 6.5 1.06 0 2.06-.2 2.98-.56l-1.5-1.5a4.25 4.25 0 01-5.5-5.5l-2-2z"/></svg>'
+        : '<svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 3.5c-4.14 0-7.5 3.5-8.5 6.5 1 3 4.36 6.5 8.5 6.5s7.5-3.5 8.5-6.5c-1-3-4.36-6.5-8.5-6.5zm0 10.75a4.25 4.25 0 110-8.5 4.25 4.25 0 010 8.5z"/><circle cx="10" cy="10" r="2.25"/></svg>';
+    });
+  </script>
 
 </body>
 </html>

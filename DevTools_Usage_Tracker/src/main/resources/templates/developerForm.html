@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Developer — DevTrack</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/devform.css">
+</head>
+<body>
+
+  <div class="app-shell">
+
+    <!-- ============================================================
+         SIDEBAR
+         Suggested Thymeleaf: extract as fragments/shell.html :: sidebar
+         and include via th:replace on every authenticated page.
+         Mark the current page's nav-item with class="nav-item active".
+         ============================================================ -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="seat-mark" aria-hidden="true">
+          <span style="background: var(--teal);"></span>
+          <span style="background: var(--teal);"></span>
+          <span style="background: var(--mist);"></span>
+          <span style="background: var(--teal);"></span>
+          <span style="background: var(--mist);"></span>
+          <span style="background: var(--mist);"></span>
+        </span>
+        <span class="brand-name">DevTrack</span>
+      </div>
+
+      <ul class="nav-group">
+        <li>
+          <a href="dashboard.html" th:href="@{/dashboard}" class="nav-item">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M3 4a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 12a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4zM11 4a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V4zM11 12a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"/></svg>
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="tools.html" th:href="@{/tools}" class="nav-item">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M14.5 2.5a3 3 0 00-4.24 4.24l-6.4 6.4a1.5 1.5 0 000 2.12l.94.94a1.5 1.5 0 002.12 0l6.4-6.4a3 3 0 004.24-4.24l-1.9 1.9-1.3-.3-.3-1.3 1.9-1.9-1.36-1.46z" clip-rule="evenodd"/></svg>
+            Tools
+          </a>
+        </li>
+        <li>
+          <a href="developers.html" th:href="@{/developers}" class="nav-item active">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M7 8a3 3 0 100-6 3 3 0 000 6zM3.5 15a3.5 3.5 0 117 0v.5h-7V15zM13.5 8a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM11.5 15a3.5 3.5 0 013.9-3.48c.99.13 1.85.85 2.1 1.82.1.4.15.83.15 1.16v.5h-6.15V15z"/></svg>
+            Developers
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-tag">DevTrack &middot; Internal Tool</div>
+      </div>
+    </aside>
+
+    <!-- ============================================================
+         MAIN COLUMN
+         ============================================================ -->
+    <div>
+
+      <!-- TOPBAR
+           Suggested Thymeleaf: fragments/shell.html :: topbar,
+           with th:text="${#authentication.name}" for the admin name. -->
+      <header class="topbar">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="developers.html" th:href="@{/developers}">Developers</a>
+          <span>/</span>
+          <span class="current">Add Developer</span>
+        </nav>
+
+        <div class="topbar-user">
+          <button type="button" class="user-menu-trigger" aria-haspopup="true">
+            <span class="avatar-chip">AD</span>
+            <span class="user-meta">
+              <span class="name" th:text="${adminName} ?: 'Alex Doran'">Alex Doran</span><br>
+              <span class="role">Admin</span>
+            </span>
+            <svg class="chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+
+          <div class="user-dropdown">
+            <a href="#">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a4 4 0 100 8 4 4 0 000-8zM3 16a7 7 0 0114 0v.5a.5.5 0 01-.5.5h-13a.5.5 0 01-.5-.5V16z" clip-rule="evenodd"/></svg>
+              My account
+            </a>
+            <form method="post" th:action="@{/logout}">
+              <button type="submit" class="signout">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h4.5A2.25 2.25 0 0112 4.25v1a.75.75 0 01-1.5 0v-1a.75.75 0 00-.75-.75h-4.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-1a.75.75 0 011.5 0v1A2.25 2.25 0 019.75 18h-4.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.19l-2.72-2.72a.75.75 0 111.06-1.06l4 4a.75.75 0 010 1.06l-4 4a.75.75 0 11-1.06-1.06l2.72-2.72H6.75A.75.75 0 016 10z" clip-rule="evenodd"/></svg>
+                Sign out
+              </button>
+            </form>
+          </div>
+        </div>
+      </header>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+
+        <div class="page-header">
+          <a href="developers.html" th:href="@{/developers}" class="back-link">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 010 1.06L9.06 10l3.73 3.71a.75.75 0 11-1.06 1.06l-4.25-4.25a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 0z" clip-rule="evenodd"/></svg>
+            Back to Developers
+          </a>
+          <h1>Add Developer</h1>
+          <p class="page-subtitle">Add a new developer record. They won't get a login &mdash; this just tracks who they are and what they use.</p>
+        </div>
+
+        <form class="card form-card" method="post" th:action="@{/developers}" th:object="${developer}" novalidate>
+
+          <!-- Identity strip: live initials avatar -->
+          <div class="form-identity">
+            <div class="identity-avatar" id="identityAvatar">?</div>
+            <div class="identity-text">
+              <p class="identity-title">Developer profile</p>
+              <p class="identity-hint">The avatar updates automatically from the name you enter below.</p>
+            </div>
+          </div>
+
+          <!-- Section: Basic Information -->
+          <div class="form-section">
+            <p class="section-title">Basic Information</p>
+
+            <div class="field-grid">
+              <div class="field field-full">
+                <label for="fullName">Full name</label>
+                <div class="input-wrap">
+                  <input type="text" id="fullName" name="fullName" th:field="*{fullName}"
+                         placeholder="e.g. Jordan Lee" required autofocus>
+                </div>
+              </div>
+
+              <div class="field field-full">
+                <label for="email">Email address</label>
+                <div class="input-wrap has-icon">
+                  <svg class="field-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M3 4a2 2 0 00-2 2v.01L10 12l9-5.99V6a2 2 0 00-2-2H3z"/><path d="M18 8.24l-7.55 5.03a1 1 0 01-1.1 0L2 8.24V14a2 2 0 002 2h12a2 2 0 002-2V8.24z"/></svg>
+                  <input type="email" id="email" name="email" th:field="*{email}"
+                         placeholder="jordan@company.com" required>
+                </div>
+                <p class="hint">Used for identification only &mdash; developers don't log in to DevTrack.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section: Employment Details -->
+          <div class="form-section">
+            <p class="section-title">Employment Details</p>
+
+            <div class="field-grid">
+              <div class="field">
+                <label for="department">Department</label>
+                <select id="department" name="department" th:field="*{department}" required>
+                  <option value="" disabled selected>Select department</option>
+                  <option value="ENGINEERING">Engineering</option>
+                  <option value="DESIGN">Design</option>
+                  <option value="PRODUCT">Product</option>
+                  <option value="DATA">Data &amp; Analytics</option>
+                  <option value="QA">QA</option>
+                  <option value="DEVOPS">DevOps</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="joinDate">Join date</label>
+                <div class="input-wrap has-icon">
+                  <svg class="field-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.75 2a.75.75 0 01.75.75V4h7V2.75a.75.75 0 011.5 0V4h.25A2.25 2.25 0 0117.5 6.25v9.5A2.25 2.25 0 0115.25 18H4.75A2.25 2.25 0 012.5 15.75v-9.5A2.25 2.25 0 014.75 4H5V2.75A.75.75 0 015.75 2zM4 8.5v7.25c0 .414.336.75.75.75h10.5a.75.75 0 00.75-.75V8.5H4z" clip-rule="evenodd"/></svg>
+                  <input type="date" id="joinDate" name="joinDate" th:field="*{joinDate}" required>
+                </div>
+                <p class="hint">Defaults to today if left as-is.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <a href="developers.html" th:href="@{/developers}" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-primary">Save Developer</button>
+          </div>
+
+        </form>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
