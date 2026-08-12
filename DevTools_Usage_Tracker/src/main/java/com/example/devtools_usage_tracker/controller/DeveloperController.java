@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/developer")
+@RequestMapping("/home")
 public class DeveloperController {
 
-    @RequestMapping("/from")
+    @RequestMapping("/developer")
     public String home() {
         return "developerForm";
     }

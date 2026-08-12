@@ -11,16 +11,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/home")
+@RequestMapping("/login")
 public class LoginController {
 
     private LoginService loginService;
 
-    @GetMapping("/login")
+    @GetMapping("/form")
     public String login() {
         return "login";
     }
-    @PostMapping("/login")
+    @PostMapping("/form")
     public String loginPost(@RequestParam String username, @RequestParam String password, Model model) {
 
         if(loginService.checkAdmin(username, password)){
